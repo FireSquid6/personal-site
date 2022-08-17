@@ -1,4 +1,4 @@
-baseURL = 'https://firesquid6.github.io/'
+baseURL = 'https://aquamarine-panda-10bb1c.netlify.app/'
 languageCode = 'en-us'
 title = "FireSquid's Portfolio"
 theme = 'showfolio'
