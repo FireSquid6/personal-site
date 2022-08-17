@@ -19,7 +19,7 @@ theme = 'showfolio'
   title = "Hey, I'm Jonathan Deiss (a.k.a. FireSquid)"
   tagline = "Game Developer and Designer"
   description = "I like making games and solving problems."
-  contact = "https://twitter.com/"
+  contact = "mailto:jonathan@firesquid.co"
 
 [params.homepage.social]
   github = "https://github.com/FireSquid6"
