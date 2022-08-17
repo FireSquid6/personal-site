@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://firesquid.github.io'
 languageCode = 'en-us'
 title = "FireSquid's Portfolio"
 theme = 'showfolio'
