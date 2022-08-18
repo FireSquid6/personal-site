@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://firesquid.co'
 languageCode = 'en-us'
 title = "FireSquid's Portfolio"
 theme = 'showfolio'
@@ -8,12 +8,12 @@ theme = 'showfolio'
   name = "FireSquid's Portfolio"
   description = "Jonathan Deiss's portfolio for game development."
   author = "Jonathan Deiss"
-  authorEmail = "jonathan@firesquid.co"
+  authorEmail = "jdeiss06@gmail.com"
   authorImage = "/images/firesquid_nobg.png"
   autoDarkMode = true
 
   copyright = "Copyright © 2021 - John Doe · All rights reserved"
-  favicon = "favicon.ico"
+  favicon = "/favicon.ico"
 
 [params.homepage]
   title = "Hey, I'm Jonathan Deiss (a.k.a. FireSquid)"
