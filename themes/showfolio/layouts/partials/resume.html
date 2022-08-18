@@ -10,6 +10,7 @@
         <div class="text-xl font-bold my-2">{{.name}}</div>
         <p class="my-1 font-light">{{.role}}</p>
         <p class="text-gray-500 my-1">{{.duration}}</p>
+        <br>
       </div>
       {{ end }}
     </div>
@@ -21,6 +22,14 @@
       {{ range .Site.Params.homepage.resume.gamedev_skills}}
       <div class="text-xl font-light my-2">{{.}}</div>
       {{end}}
+
+      <br>
+
+      <div class="text-xl font-bold my-2">Other Skills</div>
+      {{ range .Site.Params.homepage.resume.other_skills}}
+      <div class="text-xl font-light my-2">{{.}}</div>
+      {{end}}
+
     </div>
   </div>
 </section>
