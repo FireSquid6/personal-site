@@ -1,4 +1,4 @@
-baseURL = 'https://62fdbe7e0a312052a689bf10--aquamarine-panda-10bb1c.netlify.app/'
+baseURL = '/'
 languageCode = 'en-us'
 title = "FireSquid's Portfolio"
 theme = 'showfolio'
@@ -26,6 +26,7 @@ theme = 'showfolio'
 
 [params.homepage.resume]
   gamedev_skills = ["Programming in Godot", "Programming in Unity", "Programming in Gamemaker Studio 2", "Game Mechanics Design", "Game Systems Design", "Game Level Design"]
+  other_skills = ["Scripting in Python", "Static sites in Hugo", "Interactive sites with AngularJS"]
 
 [[params.homepage.resume.work]]
   name = "Hobbiest Programmer"
@@ -41,3 +42,6 @@ theme = 'showfolio'
   name = "Ginga Games"
   role = "Game Developer & Level Designer"
   duration = "January 2022 - May 2022"
+
+[markup.goldmark.renderer]
+  unsafe = true
