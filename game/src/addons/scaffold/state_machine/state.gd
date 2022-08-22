@@ -2,6 +2,7 @@ extends Node
 class_name State
 
 
+var active_signals := []
 onready var machine = get_parent() # the parent state machine manager
 
 
@@ -33,3 +34,19 @@ func _can_change() -> bool:
 # same as _input(), but only called when active
 func _active_input(event: InputEvent) -> void:
 	pass
+
+
+# adds a signal that will automatically connect when entered, and automaticalled disconnect when exited. Best used in the _ready() method.
+func active_connect_to(connector: Object, signal_name: String, method_owner: Object, method_name: String) -> void:
+	active_signals.append({
+		"connector": connector,
+		"signal": signal_name,
+		"reciever": method_owner,
+		"method": method_name 
+	})
+	
+	# make sure the connection is initiated properly
+	if machine.selected_state == self and !connector.is_connected(signal_name, method_owner, method_name):
+		connector.connect(signal_name, method_owner, method_name)
+	elif connector.is_connected(signal_name, method_owner, method_name):
+		connector.disconnect(signal_name, method_owner, method_name)

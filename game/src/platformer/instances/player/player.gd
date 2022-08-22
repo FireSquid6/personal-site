@@ -4,6 +4,11 @@ class_name PlatformPlayer
 
 var velocity = Vector2.ZERO
 var on_floor = false
+var input := {
+	"move" : 0,
+	"jump_pressed" : false,
+	"jump" : false,
+}
 var jump_buffered = false
 
 export var max_spd: float = 210
@@ -13,10 +18,25 @@ export var terminal_velocity: float = 500
 
 export var jump_time = 0.175
 export var jump_spd = 175
+export var air_friction = 0.5
+
+export var coyote_time: float = 0.05
+
+export var grv = 15
+export var jump_grv = 3
+
+export var points = 1
+export var has_walljump = false
+export var walljump_spd = 210
+
+var walljump_buffered = false
 
 onready var floor_detector: Area2D = get_node("Floor")
 onready var hazard_detector: Area2D = get_node("HazardDetector")
 onready var state_machine: Node = get_node("StateMachine")
+onready var walljump_buffer: Area2D = get_node("WallBuffer")
+onready var sprite: AnimatedSprite = get_node("Sprite")
+onready var jump_buffer: Area2D = get_node("FloorBuffer")
 
 
 signal dead()
@@ -24,6 +44,13 @@ signal dead()
 
 func _physics_process(delta):
 	# PROCESS MOVEMENT
+	# get inputs
+	input = {
+		"move" : int(Input.is_action_pressed("platformer_move_right")) - int(Input.is_action_pressed("platformer_move_left")),
+		"jump" : Input.is_action_pressed("platformer_jump"),
+		"jump_pressed" : Input.is_action_just_pressed("platformer_jump"),
+	}
+	
 	# get on_floor
 	on_floor = false
 	for body in floor_detector.get_overlapping_bodies():
@@ -36,6 +63,11 @@ func _physics_process(delta):
 	
 	# move based on current velocity
 	velocity = move_and_slide(velocity)
+	
+	# set sprite
+	sprite.animation = (state_machine.selected_state as PlatformPlayerState).animation
+	if input["move"] != 0:
+		sprite.scale.x = input["move"]
 
 
 # accelerates the player in the given direction (move). 1 for right, -1 for left, and 0 for not at all.
@@ -52,4 +84,31 @@ func accelerate(move: int, friction: float = 1):
 			velocity.x = 0
 		else:
 			velocity.x -= deacc_spd * friction * sign(velocity.x)
+
+
+func die():
+	state_machine.change_state("StateDead")
+	emit_signal("die")
+
+
+func _on_HazardDetector_body_entered(_body):
+	die()
+
+
+func request_walljump():
+	process_walljump_buffer()
 	
+	if is_on_wall() and (input["jump_pressed"] or walljump_buffered) and input["move"] != 0 and has_walljump and velocity.y >= 0:
+		walljump_buffered = false
+		velocity.x = walljump_spd * -input["move"]
+		
+		state_machine.change_state("StateJumping")
+		return true
+	
+	return false
+
+
+func process_walljump_buffer():
+	if (!walljump_buffered) and input["jump_pressed"]:
+		if len(walljump_buffer.get_overlapping_bodies()) > 0:
+			walljump_buffered = true

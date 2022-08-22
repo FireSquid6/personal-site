@@ -8,7 +8,7 @@ var state_history = [] # an array of strings containing the past few states. Thi
 var possible_states = [] # an array of strings containing the name of every possible state
 var selected_state: State # a refernce to whatever state is currently active
 export(NodePath) var starting_state = "" # a path to the starting state
-export(bool) var output_changes = false # whether state changes should be outputted to the debug console
+export(bool) var output_changes = true # whether state changes should be outputted to the debug console
 export var max_state_history_length = 20 # the maximum length the state_history can be
 
 signal state_changed(old_state, new_state) # emitted whenever a state is changed
@@ -44,6 +44,10 @@ func change_state(new_state: String, enter_args := [], exit_args := []) -> bool:
 	if (get_state(new_state)._can_change()):
 		# make sure there was an old state
 		if selected_state != null:
+			# disconnect signals
+			for item in selected_state.active_signals:
+				item["connector"].disconnect(item["signal"], item["reciever"], item["method"])
+			
 			# have the old state exit
 			# run exit function
 			selected_state._exit(exit_args)
@@ -58,6 +62,11 @@ func change_state(new_state: String, enter_args := [], exit_args := []) -> bool:
 	
 		# enter into the new state
 		selected_state = get_state(new_state)
+		
+		# connect signals
+		for item in selected_state.active_signals:
+				item["connector"].connect(item["signal"], item["reciever"], item["method"])
+		
 		selected_state._enter(enter_args)
 		new_name = selected_state.name
 
