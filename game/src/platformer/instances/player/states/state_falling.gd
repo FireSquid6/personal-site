@@ -40,6 +40,9 @@ func _game_logic(delta) -> void:
 	
 	# do walljump
 	player.request_walljump()
+	
+	# request spin
+	player.request_spin()
 
 
 # virtual method for running transition logic

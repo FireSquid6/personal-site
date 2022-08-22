@@ -25,11 +25,12 @@ export var coyote_time: float = 0.05
 export var grv = 15
 export var jump_grv = 3
 
-export var points = 1
 export var has_walljump = false
 export var walljump_spd = 210
-
 var walljump_buffered = false
+
+export var spin_spd = 230
+var can_spin = true
 
 onready var floor_detector: Area2D = get_node("Floor")
 onready var hazard_detector: Area2D = get_node("HazardDetector")
@@ -49,6 +50,7 @@ func _physics_process(delta):
 		"move" : int(Input.is_action_pressed("platformer_move_right")) - int(Input.is_action_pressed("platformer_move_left")),
 		"jump" : Input.is_action_pressed("platformer_jump"),
 		"jump_pressed" : Input.is_action_just_pressed("platformer_jump"),
+		"spin" : Input.is_action_pressed("platformer_spin")
 	}
 	
 	# get on_floor
@@ -112,3 +114,19 @@ func process_walljump_buffer():
 	if (!walljump_buffered) and input["jump_pressed"]:
 		if len(walljump_buffer.get_overlapping_bodies()) > 0:
 			walljump_buffered = true
+
+
+func request_dive():
+	pass
+
+
+func request_spin():
+	if input["spin"] and can_spin and input["move"] != 0:
+		can_spin = false
+		state_machine.change_state("StateSpinning")
+
+
+func disable():
+	visible = false
+	collision_layer = 0
+	collision_mask = 0

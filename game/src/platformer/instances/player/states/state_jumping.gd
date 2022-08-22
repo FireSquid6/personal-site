@@ -7,6 +7,7 @@ var timer: Timer
 func _enter(args := []) -> void:
 	animation = "Midair"
 	player.jump_buffered = false
+	player.can_spin = true
 	
 	# start the jump timer
 	timer = player.get_node("JumpTimer")
@@ -33,6 +34,9 @@ func _game_logic(delta) -> void:
 	
 	# request walljump
 	player.request_walljump()
+	
+	# request spin
+	player.request_spin()
 
 
 # virtual method for running transition logic
