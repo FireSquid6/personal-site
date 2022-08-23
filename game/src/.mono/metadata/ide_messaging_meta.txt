@@ -1,2 +1,0 @@
-﻿56060
-C:/Godot/3.5_mono/godot.exe

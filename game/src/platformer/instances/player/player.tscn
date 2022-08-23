@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://platformer/instances/player/player.gd" type="Script" id=1]
 [ext_resource path="res://platformer/assets/white_collar.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://platformer/instances/player/states/state_moving.gd" type="Script" id=6]
 [ext_resource path="res://platformer/instances/player/states/state_dead.gd" type="Script" id=7]
 [ext_resource path="res://platformer/instances/player/state_spin.gd" type="Script" id=8]
+[ext_resource path="res://platformer/assets/player_dive.png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
@@ -99,6 +100,11 @@ region = Rect2( 80, 0, 16, 24 )
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "Dive",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ) ],
 "loop": true,
 "name": "Dying",
@@ -174,7 +180,7 @@ one_shot = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 8 )
-animation = "Idle"
+animation = "Dive"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -182,13 +188,13 @@ position = Vector2( 0, 2.5 )
 shape = SubResource( 32 )
 
 [node name="FloorBuffer" type="Area2D" parent="."]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FloorBuffer"]
 position = Vector2( 0, 16 )
 shape = SubResource( 36 )
 
 [node name="Floor" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]

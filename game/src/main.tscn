@@ -31,7 +31,7 @@ margin_top = -42.5
 margin_right = 211.5
 margin_bottom = 42.5
 custom_fonts/font = SubResource( 1 )
-text = "This Portfolio is also a game"
+text = "This is my portfolio."
 align = 1
 valign = 1
 
