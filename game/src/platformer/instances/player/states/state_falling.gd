@@ -31,11 +31,11 @@ func _game_logic(delta) -> void:
 	if cyote_time_left > 0 and input["jump_pressed"]:
 		machine.change_state("StateJumping", [])
 	
-	 # accelerate downwards
+	# accelerate downwards
 	var grv_multiplier = 1
 	if player.velocity.y >= 0:
 		grv_multiplier = (1 - (int(player.is_on_wall()) * 0.5))
-	player.velocity.y += player.grv * grv_multiplier
+	player.velocity.y += player.grv * grv_multiplier * delta
 	player.velocity.y = clamp(player.velocity.y, -player.terminal_velocity, player.terminal_velocity)
 	
 	# do walljump
@@ -43,6 +43,9 @@ func _game_logic(delta) -> void:
 	
 	# request spin
 	player.request_spin()
+	
+	# request dive
+	player.request_dive()
 
 
 # virtual method for running transition logic

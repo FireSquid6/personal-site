@@ -4,6 +4,7 @@ extends PlatformPlayerState
 # runs whenever this state is entered
 func _enter(args := []) -> void:
 	player.velocity.y = 0
+	player.can_dive = true
 
 
 # virtaul method for running game logic. Delta is whatever value is passed to the state machine when process_states() is called.

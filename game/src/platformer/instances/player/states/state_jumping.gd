@@ -30,13 +30,16 @@ func _game_logic(delta) -> void:
 	player.accelerate(input["move"], player.air_friction)
 	
 	# do vertical movement
-	player.velocity.y += player.jump_grv
+	player.velocity.y += player.jump_grv * delta
 	
 	# request walljump
 	player.request_walljump()
 	
 	# request spin
 	player.request_spin()
+	
+	# request dive
+	player.request_dive()
 
 
 # virtual method for running transition logic

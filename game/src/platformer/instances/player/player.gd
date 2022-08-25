@@ -11,26 +11,31 @@ var input := {
 }
 var jump_buffered = false
 
-export var max_spd: float = 210
-export var deacc_spd: float = 25
-export var acc_spd: float = 40
+export var max_spd: float = 200
+export var deacc_spd: float = 50
+export var acc_spd: float = 50
 export var terminal_velocity: float = 500
 
-export var jump_time = 0.175
+export var jump_time = 0.2
 export var jump_spd = 175
-export var air_friction = 0.5
+export var air_friction = 0.75
 
 export var coyote_time: float = 0.05
 
-export var grv = 15
-export var jump_grv = 3
+export var grv = 900
+export var jump_grv = 180
+export var dive_grv = 600
 
 export var has_walljump = false
 export var walljump_spd = 210
 var walljump_buffered = false
 
-export var spin_spd = 230
+export var spin_spd = 400
 var can_spin = true
+
+export var dive_spd = 300
+var can_dive = true
+var spawn_pos: Vector2
 
 onready var floor_detector: Area2D = get_node("Floor")
 onready var hazard_detector: Area2D = get_node("HazardDetector")
@@ -43,6 +48,10 @@ onready var jump_buffer: Area2D = get_node("FloorBuffer")
 signal dead()
 
 
+func _ready():
+	spawn_pos = position
+
+
 func _physics_process(delta):
 	# PROCESS MOVEMENT
 	# get inputs
@@ -50,7 +59,8 @@ func _physics_process(delta):
 		"move" : int(Input.is_action_pressed("platformer_move_right")) - int(Input.is_action_pressed("platformer_move_left")),
 		"jump" : Input.is_action_pressed("platformer_jump"),
 		"jump_pressed" : Input.is_action_just_pressed("platformer_jump"),
-		"spin" : Input.is_action_pressed("platformer_spin")
+		"spin" : Input.is_action_pressed("platformer_spin"),
+		"dive" : Input.is_action_just_pressed("platformer_dive")
 	}
 	
 	# get on_floor
@@ -68,7 +78,7 @@ func _physics_process(delta):
 	
 	# set sprite
 	sprite.animation = (state_machine.selected_state as PlatformPlayerState).animation
-	if input["move"] != 0:
+	if input["move"] != 0 and state_machine.selected_state.name != "StateDive":
 		sprite.scale.x = input["move"]
 
 
@@ -90,7 +100,7 @@ func accelerate(move: int, friction: float = 1):
 
 func die():
 	state_machine.change_state("StateDead")
-	emit_signal("die")
+	emit_signal("dead")
 
 
 func _on_HazardDetector_body_entered(_body):
@@ -117,7 +127,9 @@ func process_walljump_buffer():
 
 
 func request_dive():
-	pass
+	if input["dive"] and can_dive:
+		can_dive = false
+		state_machine.change_state("StateDive")
 
 
 func request_spin():
