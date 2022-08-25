@@ -186,10 +186,10 @@ script = ExtResource( 10 )
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 8 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 2.5 )
 shape = SubResource( 32 )
 
@@ -204,6 +204,7 @@ shape = SubResource( 36 )
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+visible = false
 position = Vector2( 0, 12.5 )
 shape = SubResource( 31 )
 
