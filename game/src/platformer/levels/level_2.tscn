@@ -4,4 +4,7 @@
 
 [node name="Level" instance=ExtResource( 1 )]
 
+[node name="Foreground" parent="World" index="2"]
+tile_data = PoolIntArray(  )
+
 [editable path="World"]

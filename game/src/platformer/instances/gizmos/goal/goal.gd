@@ -9,3 +9,7 @@ func change_scene():
 		get_tree().reload_current_scene()
 	else:
 		get_tree().change_scene_to(next_scene)
+
+
+func _on_Area2D_body_entered(body):
+	change_scene()
