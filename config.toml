@@ -36,7 +36,7 @@ theme = 'showfolio'
 [[params.homepage.resume.work]]
   name = "Real Ocelot Studios"
   role = "Lead Game Developer"
-  duration = "August 2022 - Present"
+  duration = "August 2022 - September 2022"
 
 [[params.homepage.resume.work]]
   name = "Ginga Games"
