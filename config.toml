@@ -6,4 +6,4 @@ theme = "firesquid-portfolio"
 [module]
   [[module.mounts]]
     source = "node_modules/bootstrap/dist/js/boostrap.bundle.min.js"
-    target = "assets/js/bootstrap"
+    target = "assets/js/bootstrap.bundle.min.js"
