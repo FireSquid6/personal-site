@@ -17,6 +17,7 @@ body {
     overflow: hidden;
     background-color: #0c0c3f;
     padding: 20px 10px;
+    border-radius: 15px;
 }
 
 /* Style the header links */
@@ -53,6 +54,7 @@ body {
 /* Float the link section to the right */
 .header-right {
     display: block;
+    margin-top: 10px;
     float: right;
     height: 100%;
 }

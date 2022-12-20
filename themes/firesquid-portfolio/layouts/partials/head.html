@@ -13,8 +13,7 @@
 
     {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
     
-    {{ $style := resources.Get "scss/main.scss" | toCSS $options | minify }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" media="screen">
+    <link rel="stylesheet" href="/css/main.css">
 
     {{ $bootstrapJs := resources.Get "/js/bootstrap.min.js" }}
     <script defer src="{{ $bootstrapJs.Permalink | relURL }}"></script>
