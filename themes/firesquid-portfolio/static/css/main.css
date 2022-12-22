@@ -10877,4 +10877,20 @@ body {
   width: 100%;
 }
 
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #0c0c3f;
+  max-width: 480px;
+  max-height: 288px;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
 /*# sourceMappingURL=main.css.map */

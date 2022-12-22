@@ -1,4 +1,7 @@
 {{ define "main"}}
 {{ .Content }}
-{{- partial "hero.html" . -}}
+<div class="card-container">
+    {{- partial "project-card.html" . -}}
+</div>
+
 {{ end }}
