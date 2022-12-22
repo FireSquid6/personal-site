@@ -10779,8 +10779,19 @@ body {
   font-family: "Oxygen", sans-serif;
 }
 
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-25%);
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Style the header with a grey background and some padding */
 .header {
+  animation: 0.5s ease-out 0s 1 slideInTop;
   overflow: hidden;
   background-color: #0c0c3f;
   padding: 20px 10px;
@@ -10836,6 +10847,34 @@ body {
   .header-right {
     float: none;
   }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hero-container {
+  animation: 0.5s ease-out 0s 1 fadeIn;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  text-align: center;
+}
+
+.about {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
