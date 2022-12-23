@@ -3,7 +3,7 @@
     <meta name="viewport" constent="width=device-width, initial-scale=1">
     <meta name="description" content="Jonathan Deiss - Web developer and problem solver">
     <meta name="dc.relation" content="{{ .Site.BaseURL }}">
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="./favicon.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,9 @@
 
     {{ $options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed") }}
     
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
 
-    {{ $bootstrapJs := resources.Get "/js/bootstrap.min.js" }}
+    {{ $bootstrapJs := resources.Get "./js/bootstrap.min.js" }}
     <script defer src="{{ $bootstrapJs.Permalink | relURL }}"></script>
 
 
