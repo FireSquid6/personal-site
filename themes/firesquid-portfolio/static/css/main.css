@@ -18962,4 +18962,12 @@ body {
   margin-bottom: 0px;
 }
 
+.project-card-links a {
+  transition: all 0.2s ease-out;
+}
+
+.project-card-links a:hover {
+  transform: translateY(-5px);
+}
+
 /*# sourceMappingURL=main.css.map */
