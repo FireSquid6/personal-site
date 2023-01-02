@@ -1,47 +1,133 @@
-baseURL = '/'
-languageCode = 'en-us'
-title = "FireSquid's Portfolio"
-theme = 'showfolio'
+baseURL = "/"
+languageCode = "en-us"
+title = "Firesquid's Portfolio"
+theme = "firesquid-portfolio"
+
+[[module.mounts]]
+    source = "node_modules/bootstrap/scss"
+    target = "assets/scss/bootstrap"
+
+[[module.mounts]]
+    source = "node_modules/bootstrap/dist/js/bootstrap.min.js"
+    target = "assets/js/bootstrap.min.js"
+
+[[params.projects]]
+    github = "https://github.com/FireSquid6/tsp-heuristic-solutions"
+    thumbnail = "/images/tsp.png"
+
+    title = "Traveling Salesman Problem Heuristic Solutions Analysis"
+    description = "A project where I analyze various heuristic solutions to the traveling salesman problem and gather data on both time and space complexity. Made for my city's science fair."
+    date = "2022-2023"
+
+[[params.projects]]
+    github = "https://github.com/firesquid6/portfolio-site"
+    title = "This website"
+    thumbnail = "/images/firesquid_nobg.png"
+    description = "Built with a custom hugo theme. My first 'real' project."
+    date = "1-2-2022"
+
+[[params.projects]]
+    github = "https://github.com/FireSquid6/dodge-roll"
+    itch = "https://firesquid4004.itch.io/dodge-roll"
+
+    thumbnail = "/images/dodge-roll.png"
+    title = "Dodge Roll"
+    description = "A game I made in just 48 hours for the GMTK game jam 2022 with the theme of 'Roll of the Dice.'"
+    date = "7-15-2022"
 
 
-[params]
-  name = "FireSquid's Portfolio"
-  description = "Jonathan Deiss's portfolio for game development."
-  author = "Jonathan Deiss"
-  authorEmail = "jdeiss06@gmail.com"
-  authorImage = "/images/firesquid_nobg.png"
-  autoDarkMode = true
+[[params.projects]]
+    github = "https://github.com/firesquid6/teleorb"
+    itch = "https://firesquid4004.itch.io/teleorb-classic"
+    site = "https://teleorb.firesquid.co"
 
-  copyright = "Copyright © 2021 - John Doe · All rights reserved"
-  favicon = "/favicon.ico"
+    thumbnail = "/images/input_hint.png"
+    title = "Teleorb"
+    description = "A 2d platformer made using Godot 4. I originally developed it in Gamemaker when I was 15, but am now remaking it in my free time."
+    date = "11-20-2022"
 
-[params.homepage]
-  title = "Hey, I'm Jonathan Deiss (a.k.a. FireSquid)"
-  tagline = "Game Developer and Designer"
-  description = "I like making games and solving problems."
-  contact = "mailto:jonathan@firesquid.co"
 
-[params.homepage.social]
-  github = "https://github.com/FireSquid6"
+[[params.projects]]
+    github = "https://github.com/FireSquid6/Poltergeist-Heist"
+    itch = "https://firesquid4004.itch.io/poltergeist-heist"
 
-[params.homepage.resume]
-  gamedev_skills = ["Programming in Godot", "Programming in Unity", "Programming in Gamemaker Studio 2", "Game Mechanics Design", "Game Systems Design", "Game Level Design"]
-  other_skills = ["Scripting in Python", "Static sites in Hugo", "Interactive sites with AngularJS"]
+    thumbnail = "/images/poltergeist_heist.png"
+    title = "Poltergeist Heist"
+    description = "A puzzle platformer I made in Godot 3 for the Godot Wild Jam #43 in one week. It scored an overall ranking of 15 out of 60."
+    date = "3-11-2022"
 
-[[params.homepage.resume.work]]
-  name = "Hobbiest Programmer"
-  role = ""
-  duration = "Always"
+[[params.projects]]
+    github = "https://github.com/FireSquid6/real-time-bus-tracker"
 
-[[params.homepage.resume.work]]
-  name = "Real Ocelot Studios"
-  role = "Lead Game Developer"
-  duration = "August 2022 - September 2022"
+    thumbnail = "/images/mitxpro.png"
+    title = "Real Time Bus Tracker"
+    description = "A simple javascript exercise I did wihle studying at mitxpro."
+    date = "2022"
 
-[[params.homepage.resume.work]]
-  name = "Ginga Games"
-  role = "Game Developer & Level Designer"
-  duration = "January 2022 - May 2022"
+[[params.projects]]
+    thumbnail = "/images/mitxpro.png"
+    github = "https://github.com/FireSquid6/eye-exercise"
+    title = "Eye Exercise"
+    description = "Another simple exercise I did at mitxpro."
+    date = "2022"
 
-[markup.goldmark.renderer]
-  unsafe = true
+[[params.projects]]
+    thumbnail = "/images/mitxpro.png"
+    github = "https://github.com/FireSquid6/pacmen-exercise"
+    title = "Pacmen Exercise"
+    description = "An exercise I did at mitxpro designed to teach callback functions."
+    date = "2022"
+
+[[params.resume.skills]]
+    skill = "Web building with the MERN stack"
+
+[[params.resume.skills]]
+    skill = "Static website creation using Hugo"
+
+[[params.resume.skills]]
+    skill = "Scripting with javascript or python"
+
+[[params.resume.skills]]
+    skill = "Building CLI's with python's Typer"
+
+[[params.resume.skills]]
+    skill = "Game Development using Godot 3 and 4"
+
+[[params.resume.skills]]
+    skill = "Game Development using Gamemaker Studio 2"
+
+[[params.resume.education]]
+    title = "MITxPro"
+    description = "An online bootcamp offered by MIT. It teaches fullstack development."
+    date = "2022 - 2023"
+    type = "Bootcamp"
+
+link = "https://xpro.mit.edu/programs/program-v1:xPRO+PCCx+R1/"
+
+[[params.resume.education]]
+    title = "Veritas Academy"
+    description = "A classically modeled private school in Austin, Texas."
+    type = "High School"
+    date = "2020 - 2024"
+
+
+[[params.resume.experience]]
+    title = "Ginga Games"
+    description = "A now terminated HTML5 game studio. I worked with them for a brief period in early 2022 as a level designer before the discord server was deleted and I lost contact with all team members. The domain their website was on now seems to be used by a minecraft server."
+    type = "Small Group"
+    date = "2022"
+
+
+[[params.resume.reading]]
+    title = "The Pragmatic Programmer, 20th Anniversary Edition"
+    description = "A book written by two experienced software engineers primarily on how to write code that helps your team and your future self."
+    author = "David Thomas, Andrew Hunt"
+    link = "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/"
+    date = "Published 2019, Read 2022"
+
+[[params.resume.reading]]
+    title = "14 Habits of Highly Productive Developers"
+    author = "Zeno Rocha"
+    description = "A book featuring many interviews with many prominent software engineers about various habits that allowed them to succeed."
+    date = "Published 2020, Read 2022"
+    link = "https://14habits.com/"

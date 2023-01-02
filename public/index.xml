@@ -1,38 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on FireSquid&#39;s Portfolio</title>
-    <link>https://aquamarine-panda-10bb1c.netlify.app/</link>
-    <description>Recent content in Home on FireSquid&#39;s Portfolio</description>
+    <title>Firesquid&#39;s Portfolio</title>
+    <link>/</link>
+    <description>Recent content on Firesquid&#39;s Portfolio</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Aug 2022 15:12:38 -0500</lastBuildDate><atom:link href="https://aquamarine-panda-10bb1c.netlify.app/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test_post</title>
-      <link>https://aquamarine-panda-10bb1c.netlify.app/posts/test_post/</link>
-      <pubDate>Wed, 17 Aug 2022 15:13:54 -0500</pubDate>
-      
-      <guid>https://aquamarine-panda-10bb1c.netlify.app/posts/test_post/</guid>
-      <description></description>
-    </item>
     
-    <item>
-      <title>Function Factory</title>
-      <link>https://aquamarine-panda-10bb1c.netlify.app/projects/function_factory/</link>
-      <pubDate>Wed, 17 Aug 2022 15:09:52 -0500</pubDate>
-      
-      <guid>https://aquamarine-panda-10bb1c.netlify.app/projects/function_factory/</guid>
-      <description></description>
-    </item>
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>About Me</title>
-      <link>https://aquamarine-panda-10bb1c.netlify.app/about/</link>
-      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aquamarine-panda-10bb1c.netlify.app/about/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>

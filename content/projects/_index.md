@@ -1,9 +1,4 @@
----
-author: Jonathan Deiss
-title: "Projects"
-date: 2022-08-17T15:07:22-05:00
-draft: false
-description:
----
+All projects I have worked on - including games, sites, and bootcamp assignments.
 
-Below are some posts on project's I'm working/have worked on.
+Works in progress:
+ - [gdvm](https://github.com/FireSquid6/gdvm) A version manager similar to nvm for the Godot game engine. 
