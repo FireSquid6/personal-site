@@ -3,15 +3,6 @@ languageCode = "en-us"
 title = "Firesquid's Portfolio"
 theme = "firesquid-portfolio"
 
-[[module.mounts]]
-    source = "node_modules/bootstrap/scss"
-    target = "assets/scss/bootstrap"
-
-[[module.mounts]]
-    source = "node_modules/bootstrap/dist/js/bootstrap.min.js"
-    target = "assets/js/bootstrap.min.js"
-
-
 [params]
     email = "mailto:jdeiss06@gmail.com"
     discord = "https://discord.gg/HCqHcRWRZE"
