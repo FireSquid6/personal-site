@@ -2,9 +2,12 @@
 <html lang="{{ .Site.LanguageCode }}">
 {{- partial "head.html" . -}}
     <body>
+
+        
         {{- partial "header.html" . -}}
         <div class="container my-3" id="content">
-            <p>This is the projects page</p>
+            {{ .Content }}
+            {{- partial "project-cards.html" . -}}
             {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}

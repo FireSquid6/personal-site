@@ -4,9 +4,76 @@
     <body>
         {{- partial "header.html" . -}}
         <div class="container my-3" id="content">
-            <p>This is the resume page</p>
+            <h2>Skills</h2>
+                <ul>
+                    {{ range .Site.Params.Resume.Skills}}
+                        <li> {{ .skill }} </li>
+                    {{end}}
+                </ul>
+            
+            <h2>Education</h2>
+            
+            {{ range .Site.Params.Resume.Education }}
+                <div class="resume-block">
+                    <h4>
+                        {{ .title }}
+                        
+                        {{with .link}}
+                            <span class="resume-link">
+                                {{partial "icons/globe_24.html" (dict "href" .)}}
+                            </span>
+                        {{end}}
+
+                    </h4>
+                    <p class="resume-type"> {{ .type }} | {{ .date}} </p>
+                    <p> {{ .description}} </p>
+
+                </div>
+            {{end}}
+
+
+            <h2>Experience</h2>
+            {{ range .Site.Params.Resume.Experience }}
+                <div class="resume-block">
+                    <h4>
+                        {{ .title }}
+                
+                        {{with .link}}
+                        <span class="resume-link">
+                            {{partial "icons/globe_24.html" (dict "href" .)}}
+                        </span>
+                        {{end}}
+                
+                    </h4>
+                    <p class="resume-type"> {{ .type }} | {{ .date}} </p>
+                    <p> {{ .description}} </p>
+                
+                </div>
+            {{end}}
+
+            <h2>Reading</h2>
+            {{ range .Site.Params.Resume.Reading }}
+                <div class="resume-block">
+                    <h4>
+                        {{ .title }}
+                
+                        {{with .link}}
+                        <span class="resume-link">
+                            {{partial "icons/globe_24.html" (dict "href" .)}}
+                        </span>
+                        {{end}}
+                
+                    </h4>
+                    <p class="resume-type"> {{ .author }} | {{ .date}} </p>
+                    <p> {{ .description}} </p>
+                
+                </div>
+            {{ end }}
+
+            {{ .Content }}
             {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
     </body>
 </html>
+

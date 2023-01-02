@@ -18870,25 +18870,34 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
   text-align: center;
 }
 
-.about {
-  width: 100%;
+.hero-text {
+  text-align: left;
+  margin-left: 20px;
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   width: 100%;
 }
 
+@media screen and (max-width: 1000px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 700px) {
+  .card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .project-card {
   margin-left: auto;
   margin-right: auto;
@@ -18913,7 +18922,6 @@ body {
   border: 2px solid white;
   border-radius: 4px;
   max-width: 100%;
-  max-height: 25%;
   margin: 15px;
   transition: transform 0.2s ease-out;
 }
@@ -18962,12 +18970,34 @@ body {
   margin-bottom: 0px;
 }
 
-.project-card-links a {
+.icon-link {
+  color: white;
+  text-decoration: none;
   transition: all 0.2s ease-out;
 }
 
-.project-card-links a:hover {
-  transform: translateY(-5px);
+.icon-link:hover {
+  color: #FF7F0E;
+}
+
+.resume-block {
+  margin-bottom: 40px;
+  margin-left: 30px;
+}
+
+.resume-block h4 {
+  text-decoration: underline;
+}
+
+.resume-link {
+  margin-left: 20px;
+}
+
+.resume-type {
+  color: #aaa;
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 2px;
 }
 
 /*# sourceMappingURL=main.css.map */

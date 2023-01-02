@@ -4,6 +4,9 @@
     <body>
         {{- partial "header.html" . -}}
         <div class="container my-3" id="content">
+        
+        {{- partial "hero.html" . -}}
+
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
