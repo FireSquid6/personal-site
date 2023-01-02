@@ -1,9 +1,12 @@
 .icon-link {
-    color: white;
     text-decoration: none;
+}
+
+.icon-link:any-link {
+    color: #FF7F0E;
     transition: all 0.2s ease-out;
 }
 
 .icon-link:hover {
-    color: #FF7F0E;
+    color: white;
 }

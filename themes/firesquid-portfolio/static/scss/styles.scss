@@ -4,12 +4,12 @@ body {
     font-size: 125%;
     line-height: 1.5;
     margin: 0 auto;
-    padding: 5px;
     font-family: 'Oxygen', sans-serif;
 }
 
-a {
+a:any-link {
     color: #FF7F0E;
+    transition: all 0.2s ease-out;
 }
 
 a:hover {
@@ -17,10 +17,6 @@ a:hover {
 }
 
 a:active {
-    color: #FF7F0E;
-}
-
-a:visited {
     color: #FF7F0E;
 }
 
