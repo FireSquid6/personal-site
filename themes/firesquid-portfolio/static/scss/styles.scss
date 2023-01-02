@@ -1,0 +1,32 @@
+body {
+    background-color: #00001c;
+    color: #dfdfdf;
+    font-size: 125%;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 5px;
+    font-family: 'Oxygen', sans-serif;
+}
+
+a {
+    color: #FF7F0E;
+}
+
+a:hover {
+    color: #dfdfdf
+}
+
+a:active {
+    color: #FF7F0E;
+}
+
+a:visited {
+    color: #FF7F0E;
+}
+
+
+hr {
+    color: white;
+    border-style: inset;
+    border-width: 1px;
+}
