@@ -11,6 +11,13 @@ theme = "firesquid-portfolio"
     source = "node_modules/bootstrap/dist/js/bootstrap.min.js"
     target = "assets/js/bootstrap.min.js"
 
+
+[params]
+    email = "mailto:jdeiss06@gmail.com"
+    discord = "https://discord.gg/HCqHcRWRZE"
+    linkedin = "https://www.linkedin.com/in/jonathan-deiss-716008248/"
+
+
 [[params.projects]]
     github = "https://github.com/FireSquid6/tsp-heuristic-solutions"
     thumbnail = "/images/tsp.png"

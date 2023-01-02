@@ -11,6 +11,7 @@
 .hero-container {
     animation: 0.5s ease-out 0s 1 fadeIn;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -28,4 +29,13 @@
 .hero-text {
     text-align: left;
     margin-left: 20px;
+}
+
+.hero-text h1 {
+    font-family: 'Kanit', sans-serif;
+}
+
+.about {
+    margin: 20px;
+    max-width: 500px;
 }

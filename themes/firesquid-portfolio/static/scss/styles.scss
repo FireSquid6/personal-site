@@ -1,0 +1,28 @@
+body {
+    background-color: #00001c;
+    color: #dfdfdf;
+    font-size: 125%;
+    line-height: 1.5;
+    margin: 0 auto;
+    font-family: 'Oxygen', sans-serif;
+}
+
+a:any-link {
+    color: #FF7F0E;
+    transition: all 0.2s ease-out;
+}
+
+a:hover {
+    color: #dfdfdf
+}
+
+a:active {
+    color: #FF7F0E;
+}
+
+
+hr {
+    color: white;
+    border-style: inset;
+    border-width: 1px;
+}
