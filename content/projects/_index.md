@@ -1,4 +1,2 @@
-All projects I have worked on - including games, sites, and bootcamp assignments.
-
 Works in progress:
- - [gdvm](https://github.com/FireSquid6/gdvm) A version manager similar to nvm for the Godot game engine. 
+ - [gupm](https://github.com/FireSquid6/godot-universal-project-manager) A version and project manager for the Godot Game Engine built in electron. 
