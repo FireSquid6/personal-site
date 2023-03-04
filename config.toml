@@ -55,16 +55,16 @@ theme = "firesquid-portfolio"
     date = "3-11-2022"
 
 [[params.resume.skills]]
-    skill = "Web building with the MERN stack"
+    skill = "Frontend web development using React, Vite, TypeScript, and sass"
+
+[[params.resume.skills]]
+    skill = "Desktop application development using Electron"
 
 [[params.resume.skills]]
     skill = "Static website creation using Hugo"
 
 [[params.resume.skills]]
     skill = "Scripting with javascript or python"
-
-[[params.resume.skills]]
-    skill = "Building CLI's with python's Typer"
 
 [[params.resume.skills]]
     skill = "Game Development using Godot 3 and 4"
@@ -89,7 +89,7 @@ link = "https://xpro.mit.edu/programs/program-v1:xPRO+PCCx+R1/"
 
 [[params.resume.experience]]
     title = "Ginga Games"
-    description = "A now terminated HTML5 game studio. I worked with them for a brief period in early 2022 as a level designer before the discord server was deleted and I lost contact with all team members. The domain their website was on now seems to be used by a minecraft server."
+    description = "A now terminated HTML5 game studio. I worked as a game developer and was responsible for building in-game systems in collaboration with designers and artists."
     type = "Small Group"
     date = "2022"
 
