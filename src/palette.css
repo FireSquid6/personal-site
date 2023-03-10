@@ -1,0 +1,12 @@
+:root {
+  --background-main: #1d0303;
+  --background-tint: #614f4f;
+  --background-shade: #140202;
+
+  --accent-main: #c71717;
+  --accent-tint: #f04e4e;
+  --accent-shade: #8f0d0d;
+
+  --text-light: #F2F2F2;
+  --text-dark: #1d0303;
+}
