@@ -1,6 +1,9 @@
 @import "./palette.css";
 
 
-.app {
-  
+body {
+  background-color: var(--background-main);
+  color: var(--text-light);
+  font-family: 'Oxygen', sans-serif;
+  margin: 0px;
 }
