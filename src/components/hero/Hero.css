@@ -8,9 +8,11 @@
   text-align: center;
 }
 
-.hero h1, .hero h1 span {
+.hero h1, .hero h2 {
+  font-family: 'Space Mono', monospace;
   font-size: 3rem;
   font-weight: bold;
+  margin: 0;
 }
 
 .special-text {

@@ -9,7 +9,7 @@ export interface Tech {
 
 export const things: Thing[] = [
   {
-    name: "building websites",
+    name: "build websites",
     tech: [
       {
         name: "HTML",
@@ -38,7 +38,7 @@ export const things: Thing[] = [
     ],
   },
   {
-    name: "creating solutions",
+    name: "create solutions",
     tech: [
       {
         name: "Python",
@@ -55,7 +55,7 @@ export const things: Thing[] = [
     ],
   },
   {
-    name: "making games",
+    name: "make games",
     tech: [
       {
         name: "Gamemaker Studio 2",
@@ -68,7 +68,7 @@ export const things: Thing[] = [
     ],
   },
   {
-    name: "developing apps",
+    name: "develop apps",
     tech: [
       {
         name: "Electron",
