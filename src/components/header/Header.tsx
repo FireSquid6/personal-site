@@ -11,18 +11,14 @@ export default function Header() {
 
   return (
     <header>
-      <div className="header-container">
-        <div className="header-logo">
-          <a href="/">Jonathan Deiss</a>
-        </div>
-        <div className="header-menu">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-          </ul>
-        </div>
+      <button className={`menuButton ${headerActive ? "tilt" : ""}`} onClick={handleClick}>
+        <FontAwesomeIcon icon={faBars} size="2x"></FontAwesomeIcon>
+      </button>
+      <div className={`headerLinks ${headerActive ? "active" : "inactive"}`}>
+        <a data-testid="aboutLink" href="#about">About</a>
+        <a data-testid="projectsLink" href="#projects">Projects</a>
+        <a data-testid="experienceLink" href="#experience">Experience</a>
+        <a data-testid="linksLink" href="#links">Links</a>
       </div>
     </header>
   );
