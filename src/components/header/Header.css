@@ -43,6 +43,7 @@ header {
 .headerLinks a {
   padding: 15px;
   margin: 10px;
+  text-decoration: none;
 
   display: flex;
   align-items: center;

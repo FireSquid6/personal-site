@@ -27,7 +27,7 @@ function shuffle(array: any[]): any[] {
 
 
 export default function Hero(): JSX.Element {
-  const delay: number = 5;
+  const delay: number = 3;
   const [thingStack, setThingStack] = useState<Thing[]>(shuffle(things) as Thing[]);
   const [currentThing, setCurrentThing] = useState<Thing>(thingStack[0]);
   const [animating, setAnimating] = useState<boolean>(false);
@@ -43,7 +43,7 @@ export default function Hero(): JSX.Element {
     let startWord = 0;
     const interval = setInterval(() => {
       if (cooldown > 0) {
-        let newText = "";
+        let newText = nextText.slice(0, startWord);
         for (let i = startWord; i < textLength; i++) {
           newText += letters[Math.floor(Math.random() * letters.length)];
         }
@@ -58,7 +58,7 @@ export default function Hero(): JSX.Element {
         cooldown = delay;
         startWord += 1;
       }
-    }, 1000);
+    }, 10);
   };
 
 
@@ -74,22 +74,25 @@ export default function Hero(): JSX.Element {
     }
 
     setCurrentThing(thingStack[thingStack.length - 1])
-    startAnimation(currentThing.name);
+    startAnimation(thingStack[thingStack.length - 1].name);
   };
 
   return (
     <>
-      <div className="hero">
+      <section className="hero">
         <h2>I can: </h2>
-        <h1 onMouseEnter={handleOnMouseEnter} 
+        <h1 onTouchStart={handleOnMouseEnter} onMouseEnter={handleOnMouseEnter} 
           className={`special-text ${animating}`}
           >
             {animating ? amimationText : currentThing.name}
         </h1>
-      </div>
-      <div>
-        
-      </div>
+      </section>
+      <section className="skills">
+        <h2>Using:</h2>
+        <div className="skills-list">
+
+        </div>
+      </section>
     </>
   );
 }
