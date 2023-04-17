@@ -27,6 +27,9 @@ function shuffle(array: any[]): any[] {
 
 
 export default function Hero(): JSX.Element {
+  const filled = "\udb80\udd2e"
+  const empty = "\udb80\udd31"
+
   const delay: number = 3;
   const [thingStack, setThingStack] = useState<Thing[]>(shuffle(things) as Thing[]);
   const [currentThing, setCurrentThing] = useState<Thing>(thingStack[0]);
@@ -77,6 +80,17 @@ export default function Hero(): JSX.Element {
     startAnimation(thingStack[thingStack.length - 1].name);
   };
 
+  const getProficiencyBar = (proficiency: number): string => {
+    let bar = "";
+    for (let i = 0; i < proficiency; i++) {
+      bar += filled;
+    }
+    for (let i = 0; i < 5 - proficiency; i++) {
+      bar += empty;
+    }
+    return bar;
+  };
+
   return (
     <>
       <section className="hero">
@@ -88,9 +102,13 @@ export default function Hero(): JSX.Element {
         </h1>
       </section>
       <section className="skills">
-        <h2>Using:</h2>
         <div className="skills-list">
-
+            {currentThing.tech.map(({name, proficiency}, index) => (
+              <div key={index} className={`skill prof-${proficiency}`}>
+                <span className="align-left">{getProficiencyBar(proficiency)}</span>
+                <span className="align-right">{name}</span>
+              </div>
+            ))}
         </div>
       </section>
     </>

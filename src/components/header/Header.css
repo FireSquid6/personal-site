@@ -1,5 +1,6 @@
 @import "../../palette.css";
 
+
 header {
   position: absolute;
 }
@@ -18,9 +19,9 @@ header {
   padding: 20px;
   border-radius: 100%;
 
-  background-color: var(--accent-shade);
-  color: var(--text-light);
-  border-color: var(--text-light);
+  background-color: var(--cyan);
+  color: var(--blue7);
+  border-color: var(--blue7);
 
   z-index: -1;
 
@@ -28,11 +29,11 @@ header {
 }
 
 .menuButton:hover {
-  background-color: var(--accent-main);
+  background-color: var(--blue1);
 }
 
 .menuButton:active {
-  background: var(--accent-shade);
+  background: var(--cyan);
 }
 
 .tilt {
@@ -49,19 +50,19 @@ header {
   align-items: center;
   justify-content: center;
 
-  color: var(--text-light);
+  color: var(--blue7);
 
   border-radius: 10px;
   border-style: solid;
-  border-color: var(--text-light);
-  background-color: var(--accent-main);
+  border-color: var(--blue7);
+  background-color: var(--cyan);
   border-width: 2px;
 
   transition: all 300ms ease-out;
 }
 
 .headerLinks a:hover {
-  background-color: var(--accent-tint);
+  background-color: var(--blue1);
 }
 
 .headerLinks a:nth-child(1) {
@@ -81,7 +82,7 @@ header {
 }
 
 .headerLinks a:link {
-  color: var(--text-light);
+  color: var(--blue7);
 }
 
 .inactive a {

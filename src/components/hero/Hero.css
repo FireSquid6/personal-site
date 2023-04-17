@@ -1,15 +1,15 @@
 @import "../../palette.css";
 
 
+
 .hero {
-  background: var(--background-main);
-  color: #fff;
+  color: var(--fg);
   padding: 2rem;
   text-align: center;
 }
 
 .hero h1, .hero h2, .skills h2 {
-  font-family: 'Space Mono', monospace;
+  font-family: 'Fira Code Nerd Font';
   font-size: 3rem;
   font-weight: bold;
   margin: 0;
@@ -18,7 +18,7 @@
 .special-text {
   font-size: 2rem;
   font-weight: bold;
-  color: #0ff;
+  color: var(--cyan);
 }
 
 .skills {
@@ -26,4 +26,67 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+
+.skill {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+  font-size: 1.5rem;
+  width: 90%;
+
+  color: var(--fg);
+  background-color: var(--bg-highlight);
+  margin: 2px;
+  padding: 0.5rem;
+  border: 2px solid var(--blue7);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  width: 400px;
+}
+
+.align-right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.align-left {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+
+.prof-1 {
+  border-color: var(--red1) !important;
+  color: var(--red1) !important;
+}
+
+.prof-2 {
+  border-color: var(--orange) !important;
+  color: var(--orange) !important;
+}
+
+.prof-3 {
+  border-color: var(--yellow) !important;
+  color: var(--yellow) !important;
+}
+
+.prof-4 {
+  color: var(--green) !important;
+  border-color: var(--green) !important;
+}
+
+.prof-5 {
+  color: var(--teal) !important;
+  border-color: var(--teal) !important;
 }

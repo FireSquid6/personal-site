@@ -1,9 +1,18 @@
 @import "./palette.css";
 
 
+
+@font-face {
+  font-family: "Fira Code Nerd Font";
+  font-style: normal;
+  font-weight: 200;
+  src: url('firacode.ttf') format('truetype');
+  font-variant-ligatures: none;
+}
+
 body {
-  background-color: var(--background-main);
-  color: var(--text-light);
-  font-family: 'Oxygen', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: "Fira Code Nerd Font";
   margin: 0px;
 }
