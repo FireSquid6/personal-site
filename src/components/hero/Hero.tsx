@@ -96,7 +96,7 @@ export default function Hero(): JSX.Element {
       <section className="hero">
         <h2>I can: </h2>
         <h1 onTouchStart={handleOnMouseEnter} onMouseEnter={handleOnMouseEnter} 
-          className={`special-text ${animating}`}
+          className={`special-text`}
           >
             {animating ? amimationText : currentThing.name}
         </h1>
@@ -104,7 +104,7 @@ export default function Hero(): JSX.Element {
       <section className="skills">
         <div className="skills-list">
             {currentThing.tech.map(({name, proficiency}, index) => (
-              <div key={index} className={`skill prof-${proficiency}`}>
+              <div key={Math.random()} className={`skill prof-${proficiency} animation-delay-${index}`}>
                 <span className="align-left">{getProficiencyBar(proficiency)}</span>
                 <span className="align-right">{name}</span>
               </div>
