@@ -1,5 +1,5 @@
 import "./Hero.css";
-import { things, Thing } from "./things";
+import { things, Thing } from "./skills";
 import { useState, useEffect, MouseEventHandler } from "react";
 
 
