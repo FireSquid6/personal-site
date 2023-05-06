@@ -1,0 +1,16 @@
+@import '../../../palette.css';
+
+.project-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+
+    background-color: var(--bg-dark);
+    border: 2px solid var(--blue7);
+}
