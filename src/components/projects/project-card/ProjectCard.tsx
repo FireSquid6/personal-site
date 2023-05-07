@@ -6,7 +6,6 @@ export default function ProjectCard({
   description,
   imagePath,
   githubUrl,
-  technologies,
 }: Project) {
   return (
     <a className="project-card" href={githubUrl} target="_blank">

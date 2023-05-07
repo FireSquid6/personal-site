@@ -17,6 +17,7 @@
 
 .project-card:hover {
     transform: scale(1.05);
+    z-index: 1;
     background-color: var(--bg);
     box-shadow: 0 0 10px var(--blue7);
 }
