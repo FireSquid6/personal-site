@@ -11,7 +11,13 @@
 
 .projects__list {
   margin: 2vw;
-  gap: 2vw;
+  gap: 4vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .projects__list {
+    grid-template-columns: 1fr;
+  }
 }
