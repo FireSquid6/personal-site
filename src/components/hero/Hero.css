@@ -61,6 +61,8 @@
 
   width: 100%;
   max-width: 400px;
+
+  min-height: 350px;
 }
 
 .align-right {
