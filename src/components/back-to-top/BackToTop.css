@@ -1,0 +1,27 @@
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  height: 3rem;
+
+  padding: 1rem;
+
+  text-align: center;
+
+  font-family: 'Fira Code Nerd Font';
+
+  border-radius: 12px;
+  background-color: var(--blue7);
+  color: var(--fg);
+
+  transition: all 0.2s ease-in-out;
+  border: 2px solid var(--fg);
+}
+
+.back-to-top:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  background-color: var(--dark3);
+}
