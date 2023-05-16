@@ -46,7 +46,7 @@ export const things: Thing[] = [
       },
       {
         name: "Rust",
-        proficiency: 1,
+        proficiency: 2,
       },
       {
         name: "Node.js",
