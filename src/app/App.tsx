@@ -5,6 +5,8 @@ import About from "../components/about/About";
 import Hero from "../components/hero/Hero";
 import Projects from "../components/projects/Projects";
 import Links from "../components/links/Links";
+import Experience from "../components/experience/Experience";
+import BackToTop from "../components/back-to-top/BackToTop";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,13 +14,19 @@ function App() {
   return (
     <>
       <Header />
+      <BackToTop />
       <About
         title="Jonathan Deiss"
         subtitle="Fullstack, Software, and Game Developer"
       />
       <Hero />
       <Projects />
+      <Experience />
       <Links />
+
+      <footer>
+        <p>Made by Jonathan Deiss</p>
+      </footer>
     </>
   );
 }

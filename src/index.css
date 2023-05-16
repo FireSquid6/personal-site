@@ -16,3 +16,13 @@ body {
   font-family: "Fira Code Nerd Font";
   margin: 0px;
 }
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  background-color: var(--bg-highlight);
+  color: var(--fg);
+}

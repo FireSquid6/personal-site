@@ -9,12 +9,21 @@ export default function ExperienceItem({
   type,
   description,
   date,
+  link,
 }: ExperienceItem) {
+  const color = type === "education" ? "var(--orange)" : "var(--blue)";
+
   return (
-    <div className="experience-item">
-      <div className="experience-item__type">{type}</div>
+    <a
+      href={link}
+      className="experience-item"
+      style={{
+        color: color,
+        border: `1px solid ${color}`,
+      }}
+    >
       <div className="experience-item__description">{description}</div>
       <div className="experience-item__date">{date}</div>
-    </div>
+    </a>
   );
 }
