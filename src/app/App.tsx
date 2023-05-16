@@ -25,7 +25,11 @@ function App() {
       <Links />
 
       <footer>
-        <p>Made by Jonathan Deiss</p>
+        <p>
+          Made by Jonathan Deiss with the{" "}
+          <a href="https://github.com/folke/tokyonight.nvim">Tokyonight</a>{" "}
+          palette
+        </p>
       </footer>
     </>
   );

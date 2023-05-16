@@ -26,3 +26,14 @@ footer {
   background-color: var(--bg-highlight);
   color: var(--fg);
 }
+
+
+a {
+  color: var(--orange);
+  text-decoration: none;
+  transition: all 0.2 ease-in-out;
+}
+
+a:hover {
+  color: var(--yellow);
+}
