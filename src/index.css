@@ -6,7 +6,7 @@
   font-family: "Fira Code Nerd Font";
   font-style: normal;
   font-weight: 200;
-  src: url('firacode.ttf') format('truetype');
+  src: url('/firacode.ttf') format('truetype');
   font-variant-ligatures: none;
 }
 
