@@ -1,8 +1,0 @@
-@import "../../palette.css";
-
-.about {
-  background-color: var(--bg-dark);
-  padding: 20px;
-
-  text-align: end;
-}
