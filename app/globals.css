@@ -3,7 +3,30 @@
 @tailwind utilities;
 
 body {
-  @apply bg-bg text-fg;
+  @apply bg-bg text-fg text-base;
+}
+
+h1 {
+  @apply text-4xl font-bold text-fg_dark;
+}
+h2 {
+  @apply text-3xl font-bold;
+}
+h3 {
+  @apply text-2xl underline;
+}
+h4 {
+  @apply text-xl;
+}
+h5 {
+  @apply text-lg;
+}
+h6 {
+  @apply text-base text-blue0;
+}
+
+small {
+  @apply text-sm;
 }
 
 a {
