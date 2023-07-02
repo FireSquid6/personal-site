@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-bg text-fg text-base;
+  @apply bg-bg text-fg text-base transition-all;
 }
 
 h1 {
