@@ -7,7 +7,7 @@ export default function Header() {
       <div className="flex flex-col align-center justify-center w-full m-2">
         <h1 className="text-tealtext-center sm:text-5xl">firesquid</h1>
       </div>
-      <nav className="flex flex-row align-center justify-around">
+      <nav className="flex flex-row align-center justify-center">
         {navItems.map((item, i) => (
           <NavItem key={i} label={item.label} href={item.href} />
         ))}
