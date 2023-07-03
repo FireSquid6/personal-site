@@ -1,3 +1,6 @@
+// THIS CODE WAS COPIED FROM THE INTERNET
+// I HAVE NO IDEA HOW IT WORKS
+
 // matter is a library that let's you parse the metadata in each markdown file.
 // the lib folder does not have an assigned name like the pages folder, so you can name it anything. It's usually convention to use lib or utils
 
@@ -53,7 +56,11 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as {
+        date: string;
+        title: string;
+        description: string;
+      }),
     };
   });
 
@@ -118,6 +125,10 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    ...(matterResult.data as {
+      date: string;
+      title: string;
+      description: string;
+    }),
   };
 }

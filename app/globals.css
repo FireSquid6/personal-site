@@ -7,13 +7,13 @@ body {
 }
 
 h1 {
-  @apply text-4xl font-bold text-fg_dark;
+  @apply text-4xl font-bold text-blue;
 }
 h2 {
   @apply text-3xl font-bold;
 }
 h3 {
-  @apply text-2xl underline;
+  @apply text-xl underline;
 }
 h4 {
   @apply text-xl;
@@ -30,5 +30,29 @@ small {
 }
 
 a {
-  @apply text-red1 hover:text-red;
+  @apply text-red1 hover:text-red transition-all my-4;
+}
+
+.post h1 {
+  @apply text-3xl font-bold my-6;
+}
+
+.post h2 {
+  @apply text-2xl font-normal underline my-6;
+}
+
+.post h3 {
+  @apply text-xl underline my-4;
+}
+
+.post h4 {
+  @apply text-xl my-4;
+}
+
+.post p {
+  @apply my-4;
+}
+
+.post pre {
+  @apply bg-bg_dark p-4 my-4 rounded-lg border-bg_highlight border-2;
 }

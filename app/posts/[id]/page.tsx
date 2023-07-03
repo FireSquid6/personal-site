@@ -13,6 +13,7 @@ type Props = {
 type PostData = {
   title: string;
   date: string;
+  description: string;
   contentHtml: string;
 };
 
@@ -31,15 +32,15 @@ export default async function Post({ params }: Props) {
   return (
     <>
       {/* Post Title */}
-      <h1 className="font-extrabold text-3xl mb-1">{postData.title}</h1>
+      <h1>{postData.title}</h1>
 
-      <div className="text-gray-500 font-medium mb-5">
+      <div className="text-fg_gutter font-medium mb-5">
         <Date dateString={postData.date} />
       </div>
 
       {/* Post Content */}
       <div
-        className="text-gray-600"
+        className="post"
         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
       />
     </>
