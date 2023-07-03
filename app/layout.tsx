@@ -2,7 +2,7 @@ import Header from "@/components/Header/Header";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "FireSquid",
@@ -16,9 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={font.className}>
         <Header />
-        <main>{children}</main>
+        <main className="m-4 max-w-[100rem]">{children}</main>
       </body>
     </html>
   );
