@@ -33,6 +33,10 @@ a {
   @apply text-red1 hover:text-red transition-all my-4;
 }
 
+.post {
+  @apply max-w-4xl mx-auto;
+}
+
 .post h1 {
   @apply text-3xl font-bold my-6;
 }
