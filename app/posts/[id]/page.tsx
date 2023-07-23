@@ -1,6 +1,6 @@
 import Date from "@/components/Date/Date";
 
-import { getAllPostIds, getPostData } from "@/lib/posts";
+import { getPostData } from "@/lib/posts";
 
 type Params = {
   id: string;
