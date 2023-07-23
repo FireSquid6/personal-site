@@ -55,7 +55,7 @@ Now, open a new folder in VSCode. Once you're in the folder, you should see an I
 ![new file button location](/images/new-file.png)
 
 Press it, and create a new file. Name this file `main.js`. In this file, write:
-```
+```js
 console.log("hello world");
 ```
 Note that VSCode has special features that autocompletes parenthesis, quotes, etc. This will come in handy.
