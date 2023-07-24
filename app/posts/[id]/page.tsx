@@ -32,10 +32,12 @@ export default async function Post({ params }: Props) {
   return (
     <>
       {/* Post Title */}
-      <h1 className="text-red">{postData.title}</h1>
+      <div className="m-auto">
+        <h1 className="text-red text-center">{postData.title}</h1>
 
-      <div className="text-fg_gutter font-medium mb-5">
-        <Date dateString={postData.date} />
+        <div className="text-fg_gutter font-medium mb-5 text-center">
+          <Date dateString={postData.date} />
+        </div>
       </div>
 
       {/* Post Content */}

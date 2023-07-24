@@ -15,7 +15,7 @@ export function NavItem({ label, href }: NavItemProps) {
         pathname === href
           ? "underline text-orange hover:text-orange"
           : "text-blue hover:text-blue"
-      } p-4 mx-2 my-auto bg-black1 rounded-xl hover:bg-dark5 transition-all h-min hover:translate-y-[-4px]`}
+      } p-2 sm:p-4 mx-2 my-auto bg-black1 rounded-xl hover:bg-dark5 transition-all h-min hover:translate-y-[-4px]`}
     >
       {label}
     </a>
