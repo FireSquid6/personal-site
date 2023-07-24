@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="flex flex-row bg-bg_dark align-center py-3 sticky top-0">
       <div className="flex flex-col align-center justify-centerm-2 w-0 opacity-0 md:w-full md:opacity-100 transition-all">
-        <h1 className="text-teal hover:text-cyan transition-all text-5xl cursor-default hover:translate-x-4">
+        <h1 className="text-teal hover:text-cyan transition-all text-5xl cursor-default hover:translate-x-4 ml-2">
           firesquid
         </h1>
       </div>
