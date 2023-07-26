@@ -1,78 +1,165 @@
 ---
-title: 'The Web Development Tutorial I Wish I Had | 0'
-description: 'Getting started with javascript'
-date: '2023-07-23'
+title: 'The Web Development Tutorial I Wish I Had | 1'
+description: 'Variables, operators, and comments'
+date: '2023-07-25'
 ---
+Now that you have everything installed from [the last section](/posts/js-chapter0), we can actually get started. This section will cover variables, comments, and operators.
 
-# What this tutorial is
-I learned programming by bashing my head against the wall. While I do belive that that is the best to learn, I wish I had some sort of formal guide to follow. Through this series of articles, I wish to take someone with no programming experience to being able to create website with react.  
-
-If you have any problems throughout this course, feel free to send me a message `@firesquid6` on discord.
-
-# Getting your environment set up
-## VSCode
-This will probably be the hardest part of the entire tutorial. First you're going to need to install [VSCode](https://code.visualstudio.com/). This will be your primary "workbench" for editing code. 
-
-VSCode has a lot of customization options for themes, icons, and extensions, but I won't be going into those.
-
-If you have another text editor you'd rather use (such as vim, neovim, emacs, or sublime) you can feel free to use that instead.
-
-## Some sort of Terminal
-I'd like to note that whenever I or another tutorial refers to 'running' something, they typically mean on the command line. The command line is a place average PC users don't visit, however it will have to become your home as a programmer.
-
-The command line is basically like minecraft slash commands but for your computer. Don't worry too much about them, you'll get the hang of it.
-
-On windows, I would recommend using the [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701) application, since the provided Command Prompt and PowerShell are a bit lacking in my opinion.
-
-I've never used Mac, so I can't recommend anything. It does come with the Terminal application in launchpad, so you just use that.
-
-Right now I use [kitty](https://sw.kovidgoyal.net/kitty/) on Linux Mint, although it can run on almost any linux or mac .
-
-## nvm 
-To actually run code, you'll need a program called Node.js. However, node.js has lots of different versions, so we will be installing Node Version Manager as a tool to install Node.js.
-
-Freecodecamp has a [good tutorial on installing](https://www.freecodecamp.org/news/node-version-manager-nvm-install-guide/) this since how you install it depends on your operating system.
-
-Confirm that nvm is installed properly by running:
-```
-nvm -v
-```
-If your terminal outputs a version (for me it was `0.39.3`), you have successfully installed it. You may need to close and reopen your terminal for it to work properly
-
-## node.js
-Installing node js is simple with nvm. You can just run `nvm install 18` in your terminal, and then run `nvm use 18`. 
-
-For this tutorial I will be using node version 18, although a more modern version may be out by the time you're reading this. I'd recommend just sticking with version 18, since switching to a different version can cause annoying problems.
-
-# Writing Your First Lines of Code
-## Hello World
-If you made it this far, either thank the god of programming for encountering no issues in the installation or congradulate yourself on defeating the errors.
-
-I would recommend creating a "projects" or "source" folder somewhere easy to access, such as your desktop or home folder, and putting all of your projects in that folder.
-
-Now, open a new folder in VSCode. Once you're in the folder, you should see an Icon looking like this at the top left.
-
-![new file button location](/images/new-file.png)
-
-Press it, and create a new file. Name this file `main.js`. In this file, write:
+# Variables
+Consider the following program:
 ```js
-console.log("hello world");
-```
-Note that VSCode has special features that autocompletes parenthesis, quotes, etc. This will come in handy.
+let myVariable = 17
 
-This line of code will print "hello world" to the console when run. Don't worry exactly how or why, we'll get there.
+console.log(myvariable)
+```
+The output would be:
+```
+17
+```
 
-To run this code, press `ctrl+` ` (it's at the top left of your keyboard, typically just below escape, or just to the right of it). This will open up an integrated terminal at the bottom of VSCode.
+This program defines two variables - `myage` and `myname`. You can imagine variables as "boxes" that contain a value. Variables are defined with following syntax:
+```
+let <name-of-variable> = <initial-value>
+```
+Variables cannot contain spaces in them, so you can use underscores_between_your_words or writeYourWordInCamelCase. camelCase is typically condiered the "correct" style, so I'd recommend sticking to that.
 
-To run a javascript file, you run:
-```
-node <name-of-the-file>
-```
-so in this case, we'd run:
-```
-node main.js
-```
-You should get the output `hello world`. Congradulations! You have written your first program.
+(Note: you may see the keyword `var` used to define variables. This is a holdover from earlier versions of javascript, and has some weirdness to it that we'll learn about later)
 
-## Do It Yourself
-You aren't going to learn anything by just copying and pasting from this tutorial (in fact, I recommend you manually type everything out). Before moving on to the next chapter, write a program that prints `Hello, <your-name>`
+# Operators
+Javascript has lots of operators to change variables, here's a quick demonstration:
+```js
+let num1 = 10
+let num2 = 10
+let num3 = 10
+let num4 = 10
+let num5 = 10
+let num6 = 2
+
+num1 = num1 + 5
+num2 = num2 - 5
+num3 = num3 * 5
+num4 = num4 / 5
+num5 = num5 % 3
+num6 = num6 ** 3
+
+console.log(num1);
+console.log(num2);
+console.log(num3);
+console.log(num4);
+console.log(num5);
+console.log(num6);
+```
+You would get:
+```
+15
+10
+50
+2
+1
+8
+```
+You can also shortcut this with:
+```js
+num1 += 5
+num2 -= 5
+num3 *= 5
+num4 /= 5
+num5 %= 3
+num6 **= 3
+```
+
+
+Most of those are fairly self explanatory. The only one that might come as a suprise is the %. The % operator is called the "modulo" operator. Props to your math teacher if you already know about the modulo operator. It essentially just does division, but returns the remainder. This is useful for figuring out if a number is divisible by something:
+```js
+console.log(10 % 5)
+```
+Would output:
+```
+0
+```
+Since it outputted 0, that means there was no remainder to 10 / 5, and therefore 10 is divisible by 5. 
+
+
+You can also do complex stuff with parenthesis:
+```js
+console.log(20*(2+4))
+```
+
+# Comments
+Comments allow you to put notes in your code for your future self or another programmer.
+```js
+let myVariable = "Hello World" // a double slash puts a comment for the rest of the line
+/*
+  You can do long multiline comments like this
+  They are typically used for jsDoc functions, which we'll talk about later
+*/
+
+/*
+  You should use comments to vent your anger, because code with 
+  swearing has higher code quality.
+
+  Source: https://cme.h-its.org/exelixis/pubs/JanThesis.pdf
+*/
+
+```
+It's good practice to put comments throughout your code to help out your future self. People say a lot of things about how much/what/why you should add comments. In my opion, follow [these rules](https://stackoverflow.blog/2021/12/23/best-practices-for-writing-code-comments/) (although don't worry if you don't know what this article is talking about sometimes).
+
+
+# Strings
+So far we've only discussed variables as numbers, but they can also be strings! A string is basically just a word. For example:
+```js
+let myName = "Jonathan"
+
+console.log(myname)
+```
+You can either use "" or '' around a word to describe it as a string. 
+(actually, you can also use ``, but that does something different we'll discuss that) 
+
+Strings also have a "concatenation" operator with the + sign:
+```js
+let hello = "Hello"
+let world = "World"
+
+console.log(hello + " " + world)
+```
+This will output:
+```
+Hello World
+```
+
+# Booleans
+Booleans are really simple. They're just true or false.
+```js
+let myBoolean = true
+let myOtherBoolean = false
+```
+To get the inverse of a boolean, you use `!`:
+```js
+let trueBoolean = true
+console.log(!trueBoolean)
+```
+Outputs:
+```
+false
+```
+You can think of `!` as translating to "not"
+
+# `const` variables
+You may see variables defined with `const` before. `const` does the same thing let does, but makes the variable *immutable*, meaning that it can't be redefined later.
+```js
+const meaningOfLife = 42
+
+meaningOfLife = 2 // Your code will crash here
+```
+You should use `const` by default, and only use `let` if you know a variable will change.
+
+### A note on floats vs ints
+Javascript just has one type for numbers- that being the number type. Most languages have two different types (some with varients of those two), those being `floats` and `ints`. `ints` are integers, meaning they cannot be decimals, while `floats` are floating point numbers
+
+
+# Challenge
+Write a program that does the following before moving onto the next chapter:
+- declares a variable as a number
+- Adds 2 to that number
+- Multipes that number by another variable
+- Says "Hello, {Your name}", where your name is a string variable
