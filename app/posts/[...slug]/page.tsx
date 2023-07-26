@@ -6,7 +6,6 @@ import { allPosts } from "contentlayer/generated"
 import { format, parseISO } from "date-fns"
 
 import { Mdx } from "@/components/mdx-components"
-import { SharePost } from "@/components/share-post"
 
 interface PostProps {
   params: {
@@ -93,7 +92,6 @@ export default async function PostPage({ params }: PostProps) {
       </header>
       <hr className="my-6" />
       <Mdx code={post.body.code} />
-      <SharePost title={post.title} slug={post.slug} />
     </article>
   )
 }

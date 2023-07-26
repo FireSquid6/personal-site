@@ -3,9 +3,9 @@ const { fontFamily } = require("tailwindcss/defaultTheme")
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: ["class"],
   theme: {
@@ -13,45 +13,49 @@ module.exports = {
       center: true,
       padding: "2rem",
     },
+
+    screens: {
+      sm: "480px",
+      md: "768px",
+      lg: "976px",
+      xl: "1440px",
+    },
     extend: {
       fontFamily: {
-        sans: ['var(--font-sans)'],
+        sans: ["var(--font-sans)"],
         heading: ["var(--font-heading)", ...fontFamily.sans],
       },
+
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        bg_dark: "#1f2335",
+        bg: "#24283b",
+        bg_highlight: "#292e42",
+        black1: "#414868",
+        fg: "#c0caf5",
+        fg_dark: "#a9b1d6",
+        fg_gutter: "#3b4261",
+        dark3: "#545c7e",
+        black2: "#565f89",
+        dark5: "#737aa2",
+        blue0: "#3d59a1",
+        blue: "#7aa2f7",
+        cyan: "#7dcfff",
+        blue1: "#2ac3de",
+        blue2: "#0db9d7",
+        blue5: "#89ddff",
+        blue6: "#b4f9f8",
+        blue7: "#394b70",
+        magenta: "#bb9af7",
+        magenta2: "#ff007c",
+        purple: "#9d7cd8",
+        orange: "#ff9e64",
+        yellow: "#e0af68",
+        green: "#9ece6a",
+        green1: "#73daca",
+        green2: "#41a6b5",
+        teal: "#1abc9c",
+        red: "#f7768e",
+        red1: "#db4b4b",
       },
     },
   },
