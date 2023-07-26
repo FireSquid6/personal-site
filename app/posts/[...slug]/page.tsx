@@ -53,7 +53,7 @@ export default async function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
+    <article className="py-6">
       {post.image && (
         <div className="relative w-full h-[345px] mb-12">
           <Image
@@ -68,13 +68,11 @@ export default async function PostPage({ params }: PostProps) {
       )}
 
       <header>
-        <h1 className="mb-2">{post.title}</h1>
+        <h1 className="text-3xl text-red font-bold">{post.title}</h1>
         {post.description && (
-          <p className="text-xl mt-0 mb-6 text-gray-700 dark:text-gray-200">
-            {post.description}
-          </p>
+          <p className="text-md mt-0 mb-6 text-fg">{post.description}</p>
         )}
-        <p className="space-x-1 text-xs text-gray-500">
+        <p className="space-x-1 text-xs text-fg_dark">
           <span>{format(parseISO(post.date), "MMMM dd, yyyy")}</span>
           <span>{` • `}</span>
           <span>{post.readingTime.text}</span>

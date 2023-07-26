@@ -6,6 +6,27 @@
 
 @import "../assets/css/prism-dracula.css";
 
+article h1 {
+  @apply text-3xl font-bold text-blue1 mt-12 mb-8;
+}
+article h2 {
+  @apply text-2xl font-bold mt-8 mb-6 text-blue;
+}
+article h3 {
+  @apply text-xl underline my-6;
+}
+article h4 {
+  @apply text-xl my-4;
+}
+
+article p {
+  @apply my-6;
+}
+
+a {
+  @apply text-red1 hover:text-red transition-all;
+}
+
 /* rehype-code-titles */
 
 .rehype-code-title {

@@ -5,8 +5,6 @@ import { Header } from "@/components/header"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 
-import { fontSans } from "../lib/fonts"
-
 const font = Font({ weight: "400", subsets: ["latin"] })
 
 const title = "Next Dev Blog"
@@ -61,14 +59,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={`bg-bg text-fg ${font.className}`}>
         <Header />
-        <main
-          className={cn(
-            "min-h-screen mx-4 font-sans antialiased",
-            fontSans.variable
-          )}
-        >
-          {children}
-        </main>
+        <div className="mx-4">
+          <main className="mx-auto font-sans antialiased max-w-2xl">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   )
