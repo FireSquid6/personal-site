@@ -1,25 +1,84 @@
-import Header from "@/components/Header/Header";
-import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter } from "next/font/google"
 
-const font = Inter({ subsets: ["latin"] });
+import { Footer } from "@/components/footer"
+import { Header } from "@/components/header"
+import { ThemeProvider } from "@/components/theme-provider"
 
+import "./globals.css"
+import { cn } from "@/lib/utils"
+
+import { fontSans } from "../lib/fonts"
+
+const inter = Inter({ subsets: ["latin"] })
+
+const title = "Next Dev Blog"
+const description =
+  "A Next.js markdown blog for developers using the new App Router."
 export const metadata = {
-  title: "FireSquid",
-  description: "Jonathan Deiss' personal website and portfolio",
-};
+  metadataBase: process.env.NEXT_PUBLIC_SITE_URL,
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  description,
+  keywords: [
+    "Next.js",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "TailwindCSS",
+    "contentlayer",
+    "App Router",
+  ],
+  authors: [
+    {
+      name: "firesquid",
+      url: "https://github.com/firesquid6",
+    },
+  ],
+  creator: "firesquid6",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: process.env.NEXT_PUBLIC_SITE_URL,
+    title,
+    description,
+    siteName: title,
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface RootLayoutProps {
+  children: React.ReactNode
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={font.className}>
-        <Header />
-        <main className="m-4 max-w-[100rem]">{children}</main>
+      <body
+        className={`antialiased min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-50 ${inter.className}`}
+      >
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="max-w-2xl mx-auto py-10 px-4">
+            <Header />
+            <main
+              className={cn(
+                "min-h-screen bg-background font-sans antialiased",
+                fontSans.variable
+              )}
+            >
+              {children}
+            </main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
