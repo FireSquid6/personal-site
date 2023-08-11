@@ -5,12 +5,9 @@ import { useRef } from "react"
 export default function Platformer() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const canvas = canvasRef.current
-  if (canvas !== null) {
-    const context = canvas?.getContext("2d")
+  const context = canvas?.getContext("2d")
 
-    if (context === null) {
-      return
-    }
+  if (canvas !== null && context !== null) {
   }
 
   console.log("canvas created")
