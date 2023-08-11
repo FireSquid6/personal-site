@@ -59,10 +59,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en">
       <body className={`bg-bg text-fg ${font.className}`}>
         <Header />
-        <div className="mx-4">
-          <main className="mx-auto font-sans antialiased max-w-2xl">
-            {children}
-          </main>
+        <div>
+          <main className="font-sans antialiased">{children}</main>
         </div>
       </body>
     </html>

@@ -24,6 +24,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)"],
         heading: ["var(--font-heading)", ...fontFamily.sans],
+        mono: ["Oxygen Mono", "monospace"],
       },
 
       colors: {

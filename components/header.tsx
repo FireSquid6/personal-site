@@ -11,8 +11,8 @@ const navItems: NavItem[] = [
     href: "/",
   },
   {
-    label: "Contact",
-    href: "/contact",
+    label: "About",
+    href: "/about",
   },
   {
     label: "Posts",
@@ -27,7 +27,7 @@ export function Header() {
   return (
     <nav className="flex flex-row bg-bg_dark align-center py-3 sticky top-0">
       <div className="flex flex-col align-center justify-centerm-2 w-0 opacity-0 md:w-full md:opacity-100 transition-all">
-        <h1 className="text-teal transition-all text-5xl cursor-default ml-2 hover:rotate-6 hover:translate-y-5 hover:translate-x-1">
+        <h1 className="text-teal transition-all text-5xl cursor-default ml-2">
           firesquid
         </h1>
       </div>

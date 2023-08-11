@@ -4,7 +4,16 @@
 
 /* prism theme for syntax highlighting */
 
+@import url("https://fonts.googleapis.com/css2?family=Oxygen+Mono&display=swap");
 @import "../assets/css/prism-tokyonight.css";
+
+section {
+  @apply mx-auto max-w-4xl;
+}
+
+article {
+  @apply mx-auto max-w-4xl;
+}
 
 article h1 {
   @apply text-3xl font-bold text-blue1 mt-12 mb-8;
@@ -25,6 +34,10 @@ article p {
 
 a {
   @apply text-red1 hover:text-red transition-all;
+}
+
+.text-mono {
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 article li {

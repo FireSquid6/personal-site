@@ -1,7 +1,11 @@
+import Platformer from "@/components/home/platformer"
+import Projects from "@/components/home/projects"
+
 export default function Home() {
   return (
-    <div>
-      <p>Hello world!</p>
-    </div>
+    <>
+      <Projects />
+      <Platformer />
+    </>
   )
 }

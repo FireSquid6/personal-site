@@ -3,7 +3,7 @@
 import posts__autopublishMdx from './posts__autopublish.mdx.json' assert { type: 'json' }
 import posts__jsChapter0Mdx from './posts__js-chapter0.mdx.json' assert { type: 'json' }
 import posts__jsChapter1Mdx from './posts__js-chapter1.mdx.json' assert { type: 'json' }
-import posts__nextVitestRtlMdx from './posts__next-vitest-rtl.mdx.json' assert { type: 'json' }
 import posts__jsChapter2Mdx from './posts__js-chapter2.mdx.json' assert { type: 'json' }
+import posts__nextVitestRtlMdx from './posts__next-vitest-rtl.mdx.json' assert { type: 'json' }
 
-export const allPosts = [posts__autopublishMdx, posts__jsChapter0Mdx, posts__jsChapter1Mdx, posts__nextVitestRtlMdx, posts__jsChapter2Mdx]
+export const allPosts = [posts__autopublishMdx, posts__jsChapter0Mdx, posts__jsChapter1Mdx, posts__jsChapter2Mdx, posts__nextVitestRtlMdx]
