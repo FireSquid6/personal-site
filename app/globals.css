@@ -27,6 +27,11 @@ a {
   @apply text-red1 hover:text-red transition-all;
 }
 
+article li {
+  @apply ml-4;
+  list-style-type: disc;
+}
+
 /* rehype-code-titles */
 
 .rehype-code-title {

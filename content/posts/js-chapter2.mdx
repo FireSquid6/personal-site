@@ -1,0 +1,205 @@
+---
+title: 'The Web Development Tutorial I Wish I Had | 2'
+description: 'Control flow in javascript'
+date: '2023-07-30'
+category: 'Tutorials'
+---
+
+Now we can start writing our first actual programs.
+
+# If statements
+If statements are the most fundamental building block of programming. Here's an example:
+```js
+const myage = 18;
+
+if (myage >= 21) {
+  console.log("I can drink!");
+}
+```
+The syntax of an if statement if fairly intuitive. Inside of the parenthesis is an *expression*, which evaluates to a value. If that expression is "truthy," the code inside of the if statement is run. [more on javascript truthiness](https://developer.mozilla.org/en-US/docs/Glossary/Truthy). Some examples of expressions are:
+```js
+myage > 21  // greater than
+myage < 21  //less than
+myage >= 21  // greater than or equal to
+myage <= 21  // less than or equal to
+myage == 21  // equal to
+myage === 21  // strictl equal to
+
+```
+When comparing if two values are eqaul, use `===`. You can use `==`, but it has weirdness (similar to the `var` keyword) that you don't want in your life.
+ 
+
+## Else
+Else statements can be used to provide a "hatch" if the if statement is false.
+```js
+const myage = 18;
+
+if (myage >= 21) {
+  console.log("I can drink!");
+} else {
+  console.log("No parties for me :(");
+}
+```
+else and if statements can be chained together for an else-if pattern.
+```js
+const myage = 18;
+
+if (myage >= 21) {
+  console.log("I can drink!");
+} else if (myage >= 18) {
+  console.log("I can vote!");
+} else if (myage >= 16) {
+  console.log("I can drive!");
+} else {
+  console.log("I can't do anything :(");
+}
+```
+
+## More on Expressions
+You can use logical operators on expressions and booleans:
+- `!` - logical NOT operator
+- `&&` - logical AND operator
+- `||` - logical OR operator
+
+Here's an example:
+```js
+const myage = 16
+const mylocation = "Germany"
+
+if ((myage >= 21 && mylocation === "United States") || (myage >= 16 && mylocation === "Germany")) {
+  console.log("I can drink!")
+}
+```
+This will print "I can drink" if `myage` is >= 21 and `mylocation` is "United States," or if `myage` is >= 16 and `mylocation` is "Germany." The parenthesis act the same as they do in math by doing the logic inside of them first.
+
+The `!` operator is useful on booleans:
+
+```js
+const myboolean = true
+
+if (!myboolean) {
+  console.log("myboolean is false");
+}
+```
+# Arrays
+Arrays act as lists of numbers in javascript.
+
+# Loops
+## While loops
+
+## For loops
+
+# Write Your First Program
+The key to actually learning to code is to do stuff yourself without looking up tutorials (although googling specific questions is fine). This will be painful and you'll have to fight error messages, but stick with it.
+
+On your own, write a program that does the following:  
+- iterates through numbers 1-100
+- prints "Fizz" if the number is divisible by 3
+- prints "Buzz" if the number is divisible by 5
+- just prints the number if it isn't divisible by anything
+
+This is a common interview known as FizzBuzz, and has many solutions
+
+Your output should look like:
+```bash
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+Fizz
+22
+23
+Fizz
+Buzz
+26
+Fizz
+28
+29
+FizzBuzz
+31
+32
+Fizz
+34
+Buzz
+Fizz
+37
+38
+Fizz
+Buzz
+41
+Fizz
+43
+44
+FizzBuzz
+46
+47
+Fizz
+49
+Buzz
+Fizz
+52
+53
+Fizz
+Buzz
+56
+Fizz
+58
+59
+FizzBuzz
+61
+62
+Fizz
+64
+Buzz
+Fizz
+67
+68
+Fizz
+Buzz
+71
+Fizz
+73
+74
+FizzBuzz
+76
+77
+Fizz
+79
+Buzz
+Fizz
+82
+83
+Fizz
+Buzz
+86
+Fizz
+88
+89
+FizzBuzz
+91
+92
+Fizz
+94
+Buzz
+Fizz
+97
+98
+Fizz
+Buzz
+```
