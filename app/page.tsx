@@ -1,11 +1,11 @@
-import Platformer from "@/components/home/platformer"
 import Projects from "@/components/home/projects"
+import Skills from "@/components/home/skills"
 
 export default function Home() {
   return (
     <>
       <Projects />
-      <Platformer />
+      <Skills />
     </>
   )
 }

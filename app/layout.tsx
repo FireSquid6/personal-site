@@ -3,13 +3,12 @@ import { Oxygen as Font } from "next/font/google"
 import { Header } from "@/components/header"
 
 import "./globals.css"
-import { cn } from "@/lib/utils"
 
 const font = Font({ weight: "400", subsets: ["latin"] })
 
-const title = "Next Dev Blog"
+const title = "FireSquid"
 const description =
-  "A Next.js markdown blog for developers using the new App Router."
+  "FireSquid's Portfolio and Blog built with Next.js, TypeScript, TailwindCSS, and ContentLayer."
 export const metadata = {
   metadataBase: process.env.NEXT_PUBLIC_SITE_URL,
   title: {
@@ -25,6 +24,10 @@ export const metadata = {
     "TailwindCSS",
     "contentlayer",
     "App Router",
+    "Blog",
+    "Tutorial",
+    "Web Development",
+    "Test Driven Development",
   ],
   authors: [
     {
