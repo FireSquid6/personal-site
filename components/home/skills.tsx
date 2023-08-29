@@ -8,7 +8,7 @@ export default function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState<Skill>({
     name: "Hover over something",
     icon: null,
-    level: "Beginner",
+    level: "",
     projects: [],
   })
 

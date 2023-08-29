@@ -23,7 +23,7 @@ export interface Skill {
   name: string
   info?: string
   icon: React.ReactNode
-  level: "Beginner" | "Intermediate" | "Advanced"
+  level: "Beginner" | "Intermediate" | "Advanced" | ""
   projects: string[]
 }
 
