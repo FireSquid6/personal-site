@@ -30,7 +30,7 @@ export interface Skill {
 const size = 64
 export const skills: Skill[] = [
   {
-    name: "Intermediate",
+    name: "JavaScript",
     icon: <BiLogoJavascript size={size} />,
     level: "Intermediate",
     projects: ["this website", "matchmake.ink", "gdvm"],

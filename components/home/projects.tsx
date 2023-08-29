@@ -9,5 +9,5 @@ export default function Projects() {
 }
 
 function Project() {
-  return <p>Hello world!</p>
+  return <></>
 }

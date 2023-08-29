@@ -5,7 +5,7 @@ import { useState } from "react"
 import { Skill, skills } from "@/lib/skillsArray"
 
 export default function Skills() {
-  const [slill, setSkill] = useState<Skill>({
+  const [hoveredSkill, setHoveredSkill] = useState<Skill>({
     name: "Hover over something",
     icon: null,
     level: "Beginner",
@@ -14,15 +14,22 @@ export default function Skills() {
 
   return (
     <section className="flex flex-col items-center justify-center">
-      <div>
-        <h2 className="text-4xl font-bold">Hover over something</h2>
-        <div></div>
+      <div className="w-full p-2 m-4 border border-green flex text-green">
+        <h2 className="text-2xl">
+          {hoveredSkill.name} - {hoveredSkill.level}
+        </h2>
       </div>
+
       <div className="flex flex-wrap justify-center">
         {skills.map((skill) => (
           <div
             key={skill.name}
-            className="m-2 p-2 bg-bg_dark border-fg border rounded-lg hover:cursor-pointer hover:text-green hover:border-green hover:-translate-y-2 transition-all"
+            className={`m-2 p-2 bg-bg_dark border rounded-lg hover:cursor-pointer ${
+              hoveredSkill.name === skill.name
+                ? "text-green border-green -translate-y-2"
+                : "border-fg"
+            }  transition-all`}
+            onMouseEnter={() => setHoveredSkill(skill)}
           >
             {skill.icon}
           </div>
