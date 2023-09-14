@@ -25,7 +25,7 @@ const navItems: NavItem[] = [
 ]
 export function Header() {
   return (
-    <nav className="flex flex-row bg-bg_dark align-center py-3 sticky top-0">
+    <nav className="flex flex-row bg-bg_dark align-center py-3 sticky top-0 z-10">
       <div className="flex flex-col align-center justify-centerm-2 w-0 opacity-0 md:w-full md:opacity-100 transition-all">
         <h1 className="text-teal transition-all text-5xl cursor-default ml-2">
           firesquid
