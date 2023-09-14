@@ -2,7 +2,7 @@
 
 export default function Projects() {
   return (
-    <section className="grid grid-cols-2">
+    <section className="grid grid-cols-1 md:grid-cols-2">
       <Project
         title="Teleorb"
         description="A game about a teleporting orb"
