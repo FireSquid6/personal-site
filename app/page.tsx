@@ -1,5 +1,9 @@
-import Image from "next/image";
+import ProjectDisplay from "@/components/ProjectDisplay/ProjectDisplay";
 
 export default function Home() {
-  return <h1 className="text-center">I build things</h1>;
+  return (
+    <>
+      <ProjectDisplay />
+    </>
+  );
 }
