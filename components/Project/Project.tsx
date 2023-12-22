@@ -1,8 +1,13 @@
 import { Project as ProjectType } from "@/components/ProjectDisplay/projects";
+import Link from "next/link";
 
 export default function Project(project: ProjectType) {
   return (
-    <div className="bg-bg_dark p-4 rounded-lg">
+    <Link
+      href={project.url}
+      target="_blank"
+      className="bg-bg_dark border-fg border p-4 rounded-xl text-fg hover:text-fg hover:bg-bg_highlight hover:-translate-y-2"
+    >
       <div className="flex flex-col justify-center items-center">
         <div className="flex flex-col justify-center items-center">
           <h1 className="text-3xl font-bold">{project.title}</h1>
@@ -17,17 +22,7 @@ export default function Project(project: ProjectType) {
           {/*   })} */}
           {/* </div> */}
         </div>
-        <div className="flex flex-row justify-center items-center">
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-lg font-bold text-blue-500 hover:text-blue-700"
-          >
-            View Project
-          </a>
-        </div>
       </div>
-    </div>
+    </Link>
   );
 }
