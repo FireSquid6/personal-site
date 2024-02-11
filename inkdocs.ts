@@ -20,12 +20,11 @@ export function getOptions(): InkdocsOptions {
     contentFolder: "content",
     baseHtml,
     layouts: new Map(),
-    craftsmen: [Sidebar],
+    craftsmen: [],
     layoutTree: {
       path: "",
       layoutName: "",
-      children: [
-      ],
+      children: [],
     },
     plugins: [
       swapRouter(),
