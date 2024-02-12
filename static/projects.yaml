@@ -1,0 +1,21 @@
+---
+projects:
+  - title: Inkdocs
+    description: A hypertext based documentation site builder
+    href: https://github.com/firesquid6/inkdocs
+    status: Released, In Continuous Development
+    technologies:
+      - typescript
+      - tailwindcss
+      - htmx
+      - bun
+      - elysia
+  - title: This Site
+    description: What you're looking at right now. It's built with my personal documentation framework, inkdocs. It has been rebuilt several times with hugo, vite + react, and next js.
+    status: complete
+    href: "#"
+    technologies:
+      - inkdocs
+      - tailindcss
+  - title: dotcopy
+    description: A tool for managing your Linux dotfiles.
