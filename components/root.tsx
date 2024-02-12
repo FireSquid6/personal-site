@@ -9,7 +9,7 @@ export default function Root({
   return (
     <body class="flex min-h-[100vh] flex-col">
       <Header />
-      <main id="layout" class="flex flex-row justify-between flex-1">
+      <main id="layout" class="flex flex-row justify-between flex-1 h-full">
         {children}
       </main>
       <Footer />
