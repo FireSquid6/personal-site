@@ -1,9 +1,10 @@
 ---
 projects:
   - title: Inkdocs
-    description: A hypertext based documentation site builder
-    href: https://github.com/firesquid6/inkdocs
-    status: Released, In Continuous Development
+    description: "A hypertext based documentation site builder. It aims to be both fast, extensible, and easy to use by using an htmx based routing system"
+    href: "https://github.com/firesquid6/inkdocs"
+    status: 🟣 Released, In Continuous Development
+    priority: 1
     technologies:
       - typescript
       - tailwindcss
@@ -12,10 +13,71 @@ projects:
       - elysia
   - title: This Site
     description: What you're looking at right now. It's built with my personal documentation framework, inkdocs. It has been rebuilt several times with hugo, vite + react, and next js.
-    status: complete
+    status: 🟢 Complete
     href: "#"
+    priority: 2
     technologies:
       - inkdocs
       - tailindcss
   - title: dotcopy
-    description: A tool for managing your Linux dotfiles.
+    description: 'A tool for managing your Linux dotfiles. It "compiles" your dotfiles based on your specifications to allow you to maintain the same dotfiles with minor differences across multiple machines.'
+    priority: 1
+    href: "https://github.com/firesquid6/dotcopy"
+    status: 🟡 In Development
+    technologies:
+      - linux
+      - go
+  - title: mathworld
+    description: "A math based educational game I helped build while interning at Spicy Lobster Studios."
+    href: "https://github.com/sindrsh/mathworld"
+    status: "🟡 In Development"
+    technologies:
+      - godot
+  - title: cyberbook
+    description: "A cookie-cutter notebook app I built to teach myself React, NextJS, and Firebase."
+    href: "https://cyberbook.firesquid.co"
+    status: "🟢 Complete"
+    priority: 2
+    technologies:
+      - firebase
+      - nextjs
+      - react
+      - typescript
+      - tailwindcss
+  - title: "poltergeist heist"
+    description: "A puzzle platformer built in 10 days for the Godot Wild Jam"
+    status: "🟢 Complete"
+    priority: 2
+    technologies:
+      - godot
+  - title: teleorb
+    description: "My first game! Built in 9th grade using Gamemake Studio 2"
+    status: "🟢 Complete"
+    priority: 2
+    technologies:
+      - gms2
+  - title: powertool
+    status: "🔴 Abandoned (for now)"
+  - title: matchmake.ink
+    status: "🔴 Abandoned (for now)"
+  - title: dodge roll
+    status: "🟢 Complete"
+# put senior thesis in writings
+#
+#
+# What to put in main page:
+# - About me:
+# -- Brief description of self
+# - Experience:
+# -- Education at MITxPro
+# - My Toolset:
+# -- NixOS
+# -- Neovim
+# -- i3wm
+# -- Link to dotfiles and screenshot of desktop
+# - Links:
+# -- LinkedIn
+# -- GitHub
+# -- @firesquid6 on discord
+# -- Email
+# --
