@@ -1,4 +1,5 @@
 ---
+layout: projects
 projects:
   - title: Inkdocs
     description: "A hypertext based documentation site builder. It aims to be both fast, extensible, and easy to use by using an htmx based routing system"
