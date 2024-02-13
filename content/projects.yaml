@@ -8,7 +8,7 @@ projects:
     priority: 1
     technologies:
       - typescript
-      - tailwindcss
+      - tailwind
       - htmx
       - bun
       - elysia
@@ -19,7 +19,7 @@ projects:
     priority: 2
     technologies:
       - inkdocs
-      - tailindcss
+      - tailwind
   - title: dotcopy
     description: 'A tool for managing your Linux dotfiles. It "compiles" your dotfiles based on your specifications to allow you to maintain the same dotfiles with minor differences across multiple machines.'
     priority: 1
@@ -28,7 +28,9 @@ projects:
     technologies:
       - linux
       - go
+      - nix
   - title: mathworld
+    priority: 1
     description: "A math based educational game I helped build while interning at Spicy Lobster Studios."
     href: "https://github.com/sindrsh/mathworld"
     status: "🟡 In Development"
@@ -41,10 +43,10 @@ projects:
     priority: 2
     technologies:
       - firebase
-      - nextjs
+      - next
       - react
       - typescript
-      - tailwindcss
+      - tailwind
   - title: "poltergeist heist"
     description: "A puzzle platformer built in 10 days for the Godot Wild Jam"
     status: "🟢 Complete"
@@ -62,23 +64,5 @@ projects:
   - title: matchmake.ink
     status: "🔴 Abandoned (for now)"
   - title: dodge roll
+    priority: 2
     status: "🟢 Complete"
-# put senior thesis in writings
-#
-#
-# What to put in main page:
-# - About me:
-# -- Brief description of self
-# - Experience:
-# -- Education at MITxPro
-# - My Toolset:
-# -- NixOS
-# -- Neovim
-# -- i3wm
-# -- Link to dotfiles and screenshot of desktop
-# - Links:
-# -- LinkedIn
-# -- GitHub
-# -- @firesquid6 on discord
-# -- Email
-# --

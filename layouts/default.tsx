@@ -4,8 +4,8 @@ import Root from "../components/root";
 const DefaultLayout: Layout = (children) => {
   return (
     <Root>
-      <div id="layout">
-        <div id="content">{children}</div>
+      <div class="content" id="content">
+        {children}
       </div>
     </Root>
   );

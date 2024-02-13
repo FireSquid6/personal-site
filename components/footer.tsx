@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer class="sticky">
+    <footer>
       <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
         <div class="flex justify-center space-x-6 md:order-2">
           <a
@@ -43,7 +43,9 @@ export default function Footer() {
         <div class="mt-8 md:order-1 md:mt-0">
           <p class="text-center text-xs leading-5 text-gray-500">
             Built by Jonathan Deiss with{" "}
-            <a href="https://github.com/firesquid6/inkdocs">Inkdocs</a>
+            <a href="https://github.com/firesquid6/inkdocs">Inkdocs</a> and the{" "}
+            <a href="https://github.com/folke/tokyonight.nvim">Tokyonight</a>{" "}
+            theme.
           </p>
         </div>
       </div>
