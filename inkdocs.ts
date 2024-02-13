@@ -3,6 +3,7 @@ import swapRouter from "inkdocs/plugins/swap-router";
 import "@kitajs/html/register";
 import tailwind from "inkdocs/plugins/tailwind";
 import DefaultLayout from "./layouts/default";
+import ProjectsLayout from "./layouts/projects";
 
 export function getOptions(): InkdocsOptions {
   const baseHtml = `<html>
@@ -21,7 +22,10 @@ export function getOptions(): InkdocsOptions {
     buildFolder: "build",
     contentFolder: "content",
     baseHtml,
-    layouts: new Map([["default", DefaultLayout]]),
+    layouts: new Map([
+      ["default", DefaultLayout],
+      ["projects", ProjectsLayout],
+    ]),
     craftsmen: [],
     layoutTree: {
       path: "",
