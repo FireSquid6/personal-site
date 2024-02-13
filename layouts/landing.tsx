@@ -8,6 +8,7 @@ const LandingLayout: Layout = (children, metadata) => {
       <>
         <AboutSection children={children} />
         <ExperienceSection experiences={experiences} />
+        <LinkSection />
       </>
     </Root>
   );
@@ -92,6 +93,38 @@ function ProfileImage(props: { src: string; class: string }) {
       height={150}
       src={props.src}
     />
+  );
+}
+
+function LinkSection() {
+  const links = [
+    {
+      href: "https://www.linkedin.com/in/firesquid/",
+      icon: "fa-brands fa-linkedin",
+      alt: "LinkedIn",
+    },
+    {
+      href: "https://github.com/firesquid6",
+      icon: "fa-brands fa-github",
+      alt: "Github",
+    },
+  ];
+
+  return (
+    <div>
+      {links.map((link) => {
+        <Link href={link.href} icon={link.icon} alt={link.alt} />;
+      })}
+    </div>
+  );
+}
+
+function Link(props: { href: string; icon: string; alt: string }) {
+  return (
+    <a href={props.href}>
+      <i class={props.icon} />
+      <p class="sr-only">{props.alt}</p>
+    </a>
   );
 }
 

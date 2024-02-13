@@ -13,6 +13,7 @@ export function getOptions(): InkdocsOptions {
   <link rel="stylesheet" href="/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <script src="/htmx-bundle"></script>
+  <script src="https://kit.fontawesome.com/85551023de.js" crossorigin="anonymous"></script>
   <title>FireSquid</title>
 </head>
   {slot}
