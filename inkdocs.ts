@@ -5,6 +5,8 @@ import tailwind from "inkdocs/plugins/tailwind";
 import DefaultLayout from "./layouts/default";
 import ProjectsLayout from "./layouts/projects";
 import LandingLayout from "./layouts/landing";
+import WritingHub from "./layouts/writing-hub";
+import writingPages from "./craftsmen/writing-pages";
 
 export function getOptions(): InkdocsOptions {
   const baseHtml = `<html>
@@ -28,8 +30,9 @@ export function getOptions(): InkdocsOptions {
       ["default", DefaultLayout],
       ["projects", ProjectsLayout],
       ["landing", LandingLayout],
+      ["writing-hub", WritingHub],
     ]),
-    craftsmen: [],
+    craftsmen: [writingPages],
     layoutTree: {
       path: "",
       layoutName: "default",

@@ -108,21 +108,29 @@ function LinkSection() {
       icon: "fa-brands fa-github",
       alt: "Github",
     },
+    {
+      href: "mailto:jonathandeiss2006@gmail.com",
+      icon: "fa-regular fa-envelope",
+      alt: "Email",
+    },
   ];
 
   return (
-    <div>
-      {links.map((link) => {
-        <Link href={link.href} icon={link.icon} alt={link.alt} />;
-      })}
+    <div class="mt-16">
+      <h1 class="text-red1 text-4xl text-center mb-6">Reach Out On:</h1>
+      <div class="flex flex-col sm:flex-row w-full">
+        {links.map((link) => {
+          return <Link href={link.href} icon={link.icon} alt={link.alt} />;
+        })}
+      </div>
     </div>
   );
 }
 
 function Link(props: { href: string; icon: string; alt: string }) {
   return (
-    <a href={props.href}>
-      <i class={props.icon} />
+    <a href={props.href} class="hover:scale-105 mx-auto my-6">
+      <i class={`${props.icon} fa-8x`} />
       <p class="sr-only">{props.alt}</p>
     </a>
   );
