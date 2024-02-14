@@ -16,6 +16,8 @@ export function getOptions(): InkdocsOptions {
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <script src="/htmx-bundle"></script>
   <script src="https://kit.fontawesome.com/85551023de.js" crossorigin="anonymous"></script>
+  <link href="/prism.css" rel="stylesheet"></link>
+  <script src="/prism.js"></script>
   <title>FireSquid</title>
 </head>
   {slot}
