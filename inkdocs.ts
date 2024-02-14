@@ -7,6 +7,7 @@ import ProjectsLayout from "./layouts/projects";
 import LandingLayout from "./layouts/landing";
 import WritingHub from "./layouts/writing-hub";
 import writingPages from "./craftsmen/writing-pages";
+import WritingLayout from "./layouts/writing";
 
 export function getOptions(): InkdocsOptions {
   const baseHtml = `<html>
@@ -33,12 +34,19 @@ export function getOptions(): InkdocsOptions {
       ["projects", ProjectsLayout],
       ["landing", LandingLayout],
       ["writing-hub", WritingHub],
+      ["writing", WritingLayout],
     ]),
     craftsmen: [writingPages],
     layoutTree: {
       path: "",
       layoutName: "default",
-      children: [],
+      children: [
+        {
+          path: "writings",
+          layoutName: "writing",
+          children: [],
+        },
+      ],
     },
     plugins: [
       swapRouter(),
