@@ -49,6 +49,7 @@ projects:
       - tailwind
   - title: "poltergeist heist"
     description: "A puzzle platformer built in 10 days for the Godot Wild Jam"
+    href: "https://firesquid4004.itch.io/poltergeist-heist"
     status: "🟢 Complete"
     priority: 2
     technologies:
@@ -56,13 +57,21 @@ projects:
   - title: teleorb
     description: "My first game! Built in 9th grade using Gamemake Studio 2"
     status: "🟢 Complete"
+    href: "https://firesquid4004.itch.io/teleorb-classic"
     priority: 2
     technologies:
       - gms2
   - title: powertool
+    description: "An idea I had for a tool that could be used to easily build templates and developer tooling. I dropped it because it was a stupid idea."
     status: "🔴 Abandoned (for now)"
-  - title: matchmake.ink
-    status: "🔴 Abandoned (for now)"
+    href: "#"
+    priority: 3
+    technologies:
+      - go
+      - bun
+      - typescript
   - title: dodge roll
     priority: 2
+    description: "A top down shooter built for the GMTK game jam."
     status: "🟢 Complete"
+    href: "https://firesquid4004.itch.io/dodge-roll"
