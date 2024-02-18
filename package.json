@@ -1,34 +1,23 @@
 {
-  "name": "portfolio-site",
-  "private": true,
-  "version": "0.0.0",
+  "name": "docs",
+  "module": "index.ts",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
-    "@fortawesome/free-regular-svg-icons": "^6.3.0",
-    "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "babel-plugin-macros": "^3.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0"
+    "build": "bun run ./scripts/build.ts",
+    "serve": "bun run ./scripts/serve.ts",
+    "dev": "bun run ./scripts/dev.ts"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "jsdom": "^21.1.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0",
-    "vitest": "^0.29.2"
+    "@flydotio/dockerfile": "latest",
+    "bun-types": "latest",
+    "inkdocs-devserver": "^3.1.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@kitajs/html": "^3.0.11",
+    "@tailwindcss/typography": "^0.5.10",
+    "inkdocs": "^0.9.0"
   }
 }

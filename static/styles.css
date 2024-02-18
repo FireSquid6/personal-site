@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/jetbrainsmono.ttf") format("truetype");
+}
+
+body {
+  font-family: "JetBrainsMono", monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  @apply bg-bg_dark text-fg;
+}
+
+a {
+  @apply cursor-pointer text-orange hover:text-yellow transition-all;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-3xl font-bold;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+.content h1 {
+  @apply mt-8 mb-4 text-4xl font-bold text-red1;
+}
+
+.content h2 {
+  @apply mt-6 mb-3 text-3xl font-bold text-orange;
+}
+
+.content h3 {
+  @apply mt-5 mb-2 text-2xl font-bold text-green;
+}
+
+.content h4 {
+  @apply mt-4 mb-1 text-xl text-cyan;
+}
+
+.content h5 {
+  @apply mt-3 mb-1 text-xl text-blue;
+}
+
+.content h6 {
+  @apply mt-2 mb-1 text-lg text-purple;
+}
+
+.content p {
+  @apply mt-4 mb-4 text-fg;
+}
+
+.content ul {
+  @apply mt-4 mb-4 list-disc list-inside;
+}
