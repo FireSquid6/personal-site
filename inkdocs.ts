@@ -15,7 +15,7 @@ export function getOptions(): InkdocsOptions {
 <head>
   <link rel="stylesheet" href="/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <script src="/htmx-bundle"></script>
+  <script src="/htmx.min.js"></script>
   <script src="https://kit.fontawesome.com/85551023de.js" crossorigin="anonymous"></script>
   <link href="/prism.css" rel="stylesheet"></link>
   <script src="/prism.js"></script>
@@ -49,7 +49,7 @@ export function getOptions(): InkdocsOptions {
       ],
     },
     plugins: [
-      swapRouter(),
+      swapRouter({}),
       tailwind({
         inputFile: "styles.css",
         outputFile: "styles.css",
@@ -57,7 +57,6 @@ export function getOptions(): InkdocsOptions {
     ],
     server: {
       port: 3000,
-      apiRoutes: [],
     },
   };
 
