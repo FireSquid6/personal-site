@@ -109,7 +109,7 @@ function LinkSection() {
       alt: "Github",
     },
     {
-      href: "mailto:jonathandeiss2006@gmail.com",
+      href: "mailto:me@jdeiss.com",
       icon: "fa-regular fa-envelope",
       alt: "Email",
     },
