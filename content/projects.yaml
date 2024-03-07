@@ -23,8 +23,8 @@ projects:
   - title: dotcopy
     description: 'A tool for managing your Linux dotfiles. It "compiles" your dotfiles based on your specifications to allow you to maintain the same dotfiles with minor differences across multiple machines.'
     priority: 1
-    href: "https://github.com/firesquid6/dotcopy"
-    status: 🟡 In Development
+    href: "https://dotcopy.firesquid.co"
+    status: 🟢 Complete
     technologies:
       - linux
       - go
