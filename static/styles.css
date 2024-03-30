@@ -65,3 +65,7 @@ h4 {
 .content ul {
   @apply mt-4 mb-4 list-disc list-inside;
 }
+
+.content p {
+  @apply indent-4;
+}
