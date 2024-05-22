@@ -19,7 +19,7 @@ export function getOptions(): InkdocsOptions {
   <script src="https://kit.fontawesome.com/85551023de.js" crossorigin="anonymous"></script>
   <link href="/prism.css" rel="stylesheet"></link>
   <script src="/prism.js"></script>
-  <title>FireSquid</title>
+  <title>Jonathan Deiss</title>
 </head>
   {slot}
 </html>`;

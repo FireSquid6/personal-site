@@ -77,7 +77,7 @@ function Experience(props: Experience) {
       class="py-8 mr-full text-fg hover:text-fg hover:translate-x-5"
     >
       <h3 class="text-blue">
-        {props.type === "education" ? "🏫" : "🏢"} {props.title ?? "Untitiled"}
+        {props.type === "education" ? "🏫" : "💼"} {props.title ?? "Untitiled"}
       </h3>
       <p>{props.description ?? "no description"}</p>
       <p>{props.date ?? "Ongoing"}</p>

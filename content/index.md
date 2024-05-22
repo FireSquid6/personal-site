@@ -1,11 +1,16 @@
 ---
 layout: landing
 experience:
+  - title: Web Developer at STEMist Education
+    description: I volunteeered as a web developer at the nonprofit STEMist Education and helped rebuild their website
+    href: "https://joinstemist.org"
+    date: March 2024 - Present
+    type: work
   - title: Internship at Spicy Lobsters Studios
     description: I worked at a small open souce studio to build a math based educational game
     href: "https://github.com/sindrsh/mathworld"
-    type: "work"
-    date: July 2023 - Present
+    type: work
+    date: July 2023 - March 2024
   - title: High School at Veritas Academy
     description: I attended high school at a classical Christian school in Austin, TX
     type: education
@@ -27,6 +32,6 @@ experience:
 - **Jonathan Deiss | FireSquid6**
 - 🌎 Austin, TX
 - 🎂 April 13, 2006
-- 🔧 Neovim + i3wm + NixOS + Obsidian
+- 🔧 Neovim + Hyprland + NixOS + Obsidian
 - 🎓 Baylor University
-- 🎮 Stardew Valley, Terraria, Shenzhen I/O
+- 🎮 Stardew Valley, Terraria, FTL
