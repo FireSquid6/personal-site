@@ -1,8 +1,9 @@
 ---
 title: The Best Way to Self Teach Programming
 description: (It's just by building real things)
-tags: []
 date: "2024/05/22"
+tags: 
+  - Software Engineering
 ---
 
 
