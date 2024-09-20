@@ -3,7 +3,8 @@ layout: projects
 projects:
   - title: Inkchat
     description: "A self-hosted chat application. It allows users to communicate in realtime using a custom protocol over websockets."
-    status: 🟣 Released, In Continuous Development
+    status: 🟣 Released
+    href: "https://github.com/firesquid6/inkchat"
     priority: 1
     technologies:
       - typescript
@@ -15,7 +16,7 @@ projects:
   - title: Inkdocs
     description: "A hypertext based documentation site builder. It aims to be both fast, extensible, and easy to use by using an htmx based routing system"
     href: "https://github.com/firesquid6/inkdocs"
-    status: 🟣 Released, In Continuous Development
+    status: 🟣 Released
     priority: 1
     technologies:
       - typescript
